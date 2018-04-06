@@ -1,0 +1,91 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>AOP--Filter使用，过滤器和拦截器的区别</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+<body><div class="main"><div class="tree">
+<p><strong>Index</strong></p>
+<p><a href="webull工作.html">webull工作</a></p>
+
+<p><a href="Maven.html">Maven</a></p>
+
+<ol>
+<li><a href="Maven--distributionManagement.html">distributionManagement</a></li>
+</ol>
+<p><a href="架构相关.html">架构相关</a></p>
+
+<ol>
+<li><a href="架构相关--关于dubbo.html">关于dubbo</a></li>
+<li><a href="架构相关--POM结构图.html">POM结构图</a></li>
+<li><a href="架构相关--dbuuo基础架构.html">dbuuo基础架构</a></li>
+</ol>
+<p><a href="zk的配置与部署.html">zk的配置与部署</a></p>
+
+<p><a href="linux.html">linux</a></p>
+
+<ol>
+<li><a href="linux--linux的Java环境配置.html">linux的Java环境配置</a></li>
+<li><a href="linux--服务器远程拷贝.html">服务器远程拷贝</a></li>
+<li><a href="linux--linux_系统相关常用.html">linux 系统相关常用</a></li>
+</ol>
+<p><a href="月总结.html">月总结</a></p>
+
+<ol>
+<li><a href="月总结--18-02(md5_mysql相关).html">18-02(md5 mysql相关)</a></li>
+<li><a href="月总结--18-03-07(一个项目是如何run的).html">18-03-07(一个项目是如何run的)</a></li>
+<li><a href="月总结--18-03-08(自我评价).html">18-03-08(自我评价)</a></li>
+<li><a href="月总结--18-03-09(maven).html">18-03-09(maven)</a></li>
+<li><a href="月总结--18-03-20_xml.html">18-03-20 xml</a></li>
+<li><a href="月总结--18-03-22_app.xml各节点解析.html">18-03-22 app.xml各节点解析</a></li>
+<li><a href="月总结--18-04-01_Spring_父子容器.html">18-04-01 Spring 父子容器</a></li>
+</ol>
+<p><a href="快速调试方法.html">快速调试方法</a></p>
+
+<ol>
+<li><a href="快速调试方法--log.html">log</a></li>
+<li><a href="快速调试方法--debug远程项目.html">debug远程项目</a></li>
+<li><a href="快速调试方法--项目实施异常解决过程.html">项目实施异常解决过程</a></li>
+</ol>
+<p><a href="git.html">git</a></p>
+
+<p><a href="redis.html">redis</a></p>
+
+<ol>
+<li><a href="redis--redis的安装与主从复制.html">redis的安装与主从复制</a></li>
+<li><a href="redis--Redis集群搭建与简单使用.html">Redis集群搭建与简单使用</a></li>
+<li><a href="redis--redis操作.html">redis操作</a></li>
+</ol>
+<p><a href="AOP--Filter使用，过滤器和拦截器的区别.html">AOP--Filter使用，过滤器和拦截器的区别</a></p>
+
+<p><a href="VM分析.html">VM分析</a></p>
+
+<ol>
+<li><a href="VM分析--死锁分析.html">死锁分析</a></li>
+<li><a href="VM分析--jstack排查定位线程.html">jstack排查定位线程</a></li>
+<li><a href="VM分析--jmap,jhat,jstat,hprof使用和分析.html">jmap,jhat,jstat,hprof使用和分析</a></li>
+</ol>
+<p><a href="JMS_-_MQ.html">JMS - MQ</a></p>
+
+<ol>
+<li><a href="JMS_-_MQ--消息队列基本知识.html">消息队列基本知识</a></li>
+<li><a href="JMS_-_MQ--kafak安装与使用.html">kafak安装与使用</a></li>
+<li><a href="JMS_-_MQ--kafka集群模式.html">kafka集群模式</a></li>
+<li><a href="JMS_-_MQ--kafka-webull.html">kafka-webull</a></li>
+<li><a href="JMS_-_MQ--activeMq-JMS基本概念.html">activeMq-JMS基本概念</a></li>
+<li><a href="JMS_-_MQ--activeMq-MessageListenerContainer.html">activeMq-MessageListenerContainer</a></li>
+<li><a href="JMS_-_MQ--activeMq-三种消息监听器.html">activeMq-三种消息监听器</a></li>
+<li><a href="JMS_-_MQ--AMQ可靠消息传送.html">AMQ可靠消息传送</a></li>
+<li><a href="JMS_-_MQ--activeMq在项目中基本使用.html">activeMq在项目中基本使用</a></li>
+</ol>
+<p><a href="高并发.html">高并发</a></p>
+
+<p><a href="mysql数据库设计开发最佳实践.html">mysql数据库设计开发最佳实践</a></p>
+
+<ol>
+<li><a href="mysql数据库设计开发最佳实践--存储过程.html">存储过程</a></li>
+<li><a href="mysql数据库设计开发最佳实践--mysql知识总结.html">mysql知识总结</a></li>
+</ol></div>
+<div class="page"><h1><b><u>AOP--Filter使用，过滤器和拦截器的区别</u></b></h1>AOP（Aspect-Oriented Programming，面向切面编程）是一种编程思想，并不是一种具体的实现，谈到实现一般有Filter和代理模式两种常见的使用方式，Spring中的AOP也是封装代理模式完成的，可以说是OOP（Object-Oriented Programing，面向对象编程）的补充和完善。OOP利用封装、继承和多态把一切事物打造成对象结构，但是对于所有对象中都存在的一些公共行为，OOP就显得无能为力，也就是说OOP允许你定义从上到下的关系，但并不适合定义从左到右的关系。抽象和接口虽好，但对所有不相干的对象建立共同的接口或父类未免有些生硬，例如日志功能，日志代码几乎散布在所有的对象层次中，而它和散布到对象的核心功能毫无关系，对于其他类型的代码，如安全性、异常处理和透明的持续性也是如此。因此，为减少这种大量的重复代码，面向切面技术诞生了，AOP和OOP的关系好似JSP和Servlet的关系，以此之长，补彼之短。<br /> <br /><span style="color:#ff0000;">Java中常见的AOP技术有两个，分别是Filter和代理模式（也可以称为过滤器和拦截器），Filter是基于回调函数（请看《</span><a href="http://blog.csdn.net/bjyfb/article/details/10462555">Java回调机制解析</a><span style="color:#ff0000;">》），代理模式是基于Java反射技术，代理模式又分为静态代理和动态代理，动态代理就是拦截器的简单实现。（过滤器和拦截器的区别可参见《</span><a href="http://www.blogjava.net/hello-yun/archive/2011/11/21/364469.html">过滤器和拦截器的区别</a><span style="color:#ff0000;">》）</span>他们各自实现的功能不同，原理如出一辙。如下图，以添加用户为例，采用Module1架构模式，从图中可以看出无论程序从左向右或者从右向左执行都必须经过Filter，Filter在Request到达JSP（Servlet）前截获Request并进行预处理，也可以在Response离开JSP（Servlet）时处理Response，然后对Request进行统一的设置后继续向后传递，比如可以在Filter完成字符集的设置，用户身份的识别，敏感词汇的过滤等等，配置Filter个数不限。<br /><br /><img src="images\13-1.png" alt="images\13-1.png" /><br /><span style="color:#454545;">我们现在可以想象Filter和Interceptor的区别了，这两者其中最大的一个区别是Filter是基于回调函数，需要容器的支持，没有容器是无法回调doFilter()方法，而Interceptor是基于Java的反射机制的，和容器无关。</span><br /><br />下面就以设置字符集为例，首先创建一个Class文件，并让他实现Filter接口，覆写init和doFilter，代码如下：<br /><br /><div class="codebox"><div class="codebox"><span style="color:#7f0044;font-weight:400">public</span>&nbsp;<span style="color:#7f0044;font-weight:400">class</span>&nbsp;CharsetEncodingFilter&nbsp;<span style="color:#7f0044;font-weight:400">implements</span>&nbsp;Filter&nbsp;{&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#7f0044;font-weight:400">private</span>&nbsp;String&nbsp;endcoding;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;@Override&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#7f0044;font-weight:400">public</span>&nbsp;<span style="color:#7f0044;font-weight:400">void</span>&nbsp;destroy()&nbsp;{&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0088ff;font-weight:400">//&nbsp;TODO&nbsp;Auto-generated&nbsp;method&nbsp;stub&nbsp;&nbsp;</span><br />&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;@Override&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#7f0044;font-weight:400">public</span>&nbsp;<span style="color:#7f0044;font-weight:400">void</span>&nbsp;doFilter(ServletRequest&nbsp;request,&nbsp;ServletResponse&nbsp;response,&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FilterChain&nbsp;chain)&nbsp;<span style="color:#7f0044;font-weight:400">throws</span>&nbsp;IOException,&nbsp;ServletException&nbsp;{&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request.setCharacterEncoding(endcoding);&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0088ff;font-weight:400">//</span><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chain.doFilter(request,&nbsp;response);&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;<br />&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;@Override&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#7f0044;font-weight:400">public</span>&nbsp;<span style="color:#7f0044;font-weight:400">void</span>&nbsp;init(FilterConfig&nbsp;filterConfig)&nbsp;<span style="color:#7f0044;font-weight:400">throws</span>&nbsp;ServletException&nbsp;{&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#ff9d00;font-weight:700">this</span>.endcoding&nbsp;=&nbsp;filterConfig.getInitParameter(<span style="color:#3ad900;font-weight:400">"encoding"</span>);&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;<br />}</div></div><br /><br /><span style="color:#454545;">Filter虽不是一个Servlet，但它需要在web.xml文件中配置之后才能使用，具体解释看代码中的注释，如下:</span><br /><div class="codebox"><div class="codebox">&lt;filter&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;filter-name&gt;CharsetEncodingFilter&lt;/filter-name&gt;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;filter-class&gt;com.snail.drp.util.filter.CharsetEncodingFilter&lt;/filter-class&gt;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0088ff;font-weight:400">&lt;!--在Filter初始化格式&nbsp;&nbsp;--&gt;</span><br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;init-param&gt;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;param-name&gt;encoding&lt;/param-name&gt;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;param-value&gt;GB18030&lt;/param-value&gt;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/init-param&gt;&nbsp;&nbsp;<br />&lt;/filter&gt;&nbsp;&nbsp;<br />&lt;filter-mapping&gt;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;filter-name&gt;CharsetEncodingFilter&lt;/filter-name&gt;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;url-pattern&gt;*.jsp&lt;/url-pattern&gt;&nbsp;&nbsp;<br />&lt;/filter-mapping&gt;&nbsp;&nbsp;<br />&lt;filter-mapping&gt;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;filter-name&gt;CharsetEncodingFilter&lt;/filter-name&gt;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;url-pattern&gt;/servlet/*&lt;/url-pattern&gt;&nbsp;&nbsp;<br />&lt;/filter-mapping&gt;</div></div><br /><br /></div></div>
+</body></html>

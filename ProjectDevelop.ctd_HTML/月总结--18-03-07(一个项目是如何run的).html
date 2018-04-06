@@ -1,0 +1,91 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>18-03-07(一个项目是如何run的)</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+<body><div class="main"><div class="tree">
+<p><strong>Index</strong></p>
+<p><a href="webull工作.html">webull工作</a></p>
+
+<p><a href="Maven.html">Maven</a></p>
+
+<ol>
+<li><a href="Maven--distributionManagement.html">distributionManagement</a></li>
+</ol>
+<p><a href="架构相关.html">架构相关</a></p>
+
+<ol>
+<li><a href="架构相关--关于dubbo.html">关于dubbo</a></li>
+<li><a href="架构相关--POM结构图.html">POM结构图</a></li>
+<li><a href="架构相关--dbuuo基础架构.html">dbuuo基础架构</a></li>
+</ol>
+<p><a href="zk的配置与部署.html">zk的配置与部署</a></p>
+
+<p><a href="linux.html">linux</a></p>
+
+<ol>
+<li><a href="linux--linux的Java环境配置.html">linux的Java环境配置</a></li>
+<li><a href="linux--服务器远程拷贝.html">服务器远程拷贝</a></li>
+<li><a href="linux--linux_系统相关常用.html">linux 系统相关常用</a></li>
+</ol>
+<p><a href="月总结.html">月总结</a></p>
+
+<ol>
+<li><a href="月总结--18-02(md5_mysql相关).html">18-02(md5 mysql相关)</a></li>
+<li><a href="月总结--18-03-07(一个项目是如何run的).html">18-03-07(一个项目是如何run的)</a></li>
+<li><a href="月总结--18-03-08(自我评价).html">18-03-08(自我评价)</a></li>
+<li><a href="月总结--18-03-09(maven).html">18-03-09(maven)</a></li>
+<li><a href="月总结--18-03-20_xml.html">18-03-20 xml</a></li>
+<li><a href="月总结--18-03-22_app.xml各节点解析.html">18-03-22 app.xml各节点解析</a></li>
+<li><a href="月总结--18-04-01_Spring_父子容器.html">18-04-01 Spring 父子容器</a></li>
+</ol>
+<p><a href="快速调试方法.html">快速调试方法</a></p>
+
+<ol>
+<li><a href="快速调试方法--log.html">log</a></li>
+<li><a href="快速调试方法--debug远程项目.html">debug远程项目</a></li>
+<li><a href="快速调试方法--项目实施异常解决过程.html">项目实施异常解决过程</a></li>
+</ol>
+<p><a href="git.html">git</a></p>
+
+<p><a href="redis.html">redis</a></p>
+
+<ol>
+<li><a href="redis--redis的安装与主从复制.html">redis的安装与主从复制</a></li>
+<li><a href="redis--Redis集群搭建与简单使用.html">Redis集群搭建与简单使用</a></li>
+<li><a href="redis--redis操作.html">redis操作</a></li>
+</ol>
+<p><a href="AOP--Filter使用，过滤器和拦截器的区别.html">AOP--Filter使用，过滤器和拦截器的区别</a></p>
+
+<p><a href="VM分析.html">VM分析</a></p>
+
+<ol>
+<li><a href="VM分析--死锁分析.html">死锁分析</a></li>
+<li><a href="VM分析--jstack排查定位线程.html">jstack排查定位线程</a></li>
+<li><a href="VM分析--jmap,jhat,jstat,hprof使用和分析.html">jmap,jhat,jstat,hprof使用和分析</a></li>
+</ol>
+<p><a href="JMS_-_MQ.html">JMS - MQ</a></p>
+
+<ol>
+<li><a href="JMS_-_MQ--消息队列基本知识.html">消息队列基本知识</a></li>
+<li><a href="JMS_-_MQ--kafak安装与使用.html">kafak安装与使用</a></li>
+<li><a href="JMS_-_MQ--kafka集群模式.html">kafka集群模式</a></li>
+<li><a href="JMS_-_MQ--kafka-webull.html">kafka-webull</a></li>
+<li><a href="JMS_-_MQ--activeMq-JMS基本概念.html">activeMq-JMS基本概念</a></li>
+<li><a href="JMS_-_MQ--activeMq-MessageListenerContainer.html">activeMq-MessageListenerContainer</a></li>
+<li><a href="JMS_-_MQ--activeMq-三种消息监听器.html">activeMq-三种消息监听器</a></li>
+<li><a href="JMS_-_MQ--AMQ可靠消息传送.html">AMQ可靠消息传送</a></li>
+<li><a href="JMS_-_MQ--activeMq在项目中基本使用.html">activeMq在项目中基本使用</a></li>
+</ol>
+<p><a href="高并发.html">高并发</a></p>
+
+<p><a href="mysql数据库设计开发最佳实践.html">mysql数据库设计开发最佳实践</a></p>
+
+<ol>
+<li><a href="mysql数据库设计开发最佳实践--存储过程.html">存储过程</a></li>
+<li><a href="mysql数据库设计开发最佳实践--mysql知识总结.html">mysql知识总结</a></li>
+</ol></div>
+<div class="page"><h1><b><u>18-03-07(一个项目是如何run的)</u></b></h1>项目架构理解：<br />项目架构：由maven进行管理的client(API, jar) + center(服务提供者, war)，且是一个spring mvc项目<br /><br />spring 与spring mvc , spring boot关系？<br />1.spring boot extends spring mvc extends spring <br />2.spring就是一个IoC容器实现，后来，随着IoC思想的发扬光大，逐步将各种功能模块集成到IoC这个框架下，包括事物、日志、缓存等。<br /><br />从 SpringMVC 初始化是如何进行的？<br />• tomcat下的conf中也有一个web.xml文件,org.apache.catalina.servlets.DefaultServlet <br />缺省servlet：org.apache.catalina.servlets.DefaultServlet，作用是处理其他servlet处理不到的请求<br />我们知道，在我们工程的web.xml中，会配置servlet映射，但是有些访问无法找到映射，如一些静态图片，一些js文件等，那服务器是如何返回给客户端的呢？<a href="http://tomcat.apache.org/tomcat-6.0-doc/default-servlet.html">http://tomcat.apache.org/tomcat-6.0-doc/default-servlet.html</a><br />• <br />web.xml中配置项的加载顺序是<span style="color:#f30404;">context-param=&gt;listener=&gt;filter=&gt;servlet</span>,配置项的顺序并不会改变加载顺序，但是同类型的配置项会应该加载顺序，servlet中也可以通过load-on-startup来指定加载顺序。<br /><span style="color:#4f4f4f;">1.启动一个WEB项目的时候,容器(如:Tomcat)会去读它的配置文件web.xml.读两个节点: &lt;context-param&gt;&lt;/context-param&gt; 和 &lt;listener&gt;&lt;/listener&gt;</span><br />&lt;param-name&gt;webAppRootKey&lt;/param-name&gt;：获取当前项目的根路径,部署在同一容器中的Web项目，要配置不同的&lt;param-value&gt;，不能重复,可以配合log<br />&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;：加载Spring配置文件，用来配置<span style="color:#f30404;">父上下文</span>，一般包括数据源连接、service、dao(Mapper)等<br /><br /><span style="color:#4f4f4f;">2.紧接着,容器创建一个ServletContext(父上下文),这个WEB项目所有部分都将共享这个上下文. </span><br /><img src="images\41-1.png" alt="images\41-1.png" /><br /><span style="color:#4f4f4f;">3.容器将&lt;context-param&gt;&lt;/context-param&gt;转化为键值对,并交给ServletContext. </span><br /><br /><span style="color:#4f4f4f;">4.容器创建&lt;listener&gt;&lt;/listener&gt;中的类实例,即创建监听. </span><br />IntrospectorCleanupListener：主要用于解决java.beans.Introspector导致的内存泄漏的问题，<a href="https://www.cnblogs.com/qiankun-site/p/5886673.html">https://www.cnblogs.com/qiankun-site/p/5886673.html</a><br />ContextLoaderListener：ContextLoaderListener的作用就是启动Web容器时，<span style="color:#f30404;">读取在contextConfigLocation中定义的xml文件</span>，自动装配ApplicationContext的配置信息，并产生WebApplicationContext对象，然后将这个对象放置在ServletContext的属性里，这样我们只要得到Servlet就可以得到WebApplicationContext对象，并利用这个对象访问spring容器管理的bean。简单来说，就是这段配置为项目提供了spring支持，初始化了Ioc容器。<a href="https://www.jianshu.com/p/523bfddf0810">https://www.jianshu.com/p/523bfddf0810</a>； <br /><br /><span style="color:#f30404;">那么WEB容器启动的时候，又是怎么通过spring将app.xml里面的bean做的初始化呢？web =&gt; spring启动初始化bean是怎么完成的呢？</span><br />由org.springframework.web.context.support.XmlWebApplicationContext调到loadBeanDefinitions 这里加载app.xml<br /><a href="http://blog.csdn.net/MrZhangXL/article/details/78587426">http://blog.csdn.net/MrZhangXL/article/details/78587426</a><br /><br /><br />通过ContextLoaderListener这里面在上下文环境中生成的内容，我们称之为父上下文环境。<br />我们通过DispatcherServlet生成的上下文环境就是子上下文环境，如果在父上下文中已经生成，子上下文环境就不会再生成。<br /><br />spring是管理逻辑层和数据访问层的依赖。<span style="color:#f30404;">而listener是web组件，那么必然不能放在spring里面。真正实例化它的应该是tomcat</span>，在启动加载web.xml实例化的。上层的组件不可能被下层实例化得到。<br /><br /><span style="color:#4f4f4f;">5.在监听中会有contextInitialized(ServletContextEvent args)初始化方法,在这个方法中获得 </span><br /><span style="color:#4f4f4f;">ServletContext = ServletContextEvent.getServletContext(); </span><br /><span style="color:#4f4f4f;">context-param的值 = ServletContext.getInitParameter("context-param的键"); </span><br /><br /><span style="color:#4f4f4f;">6.得到这个context-param的值之后,你就可以做一些操作了.注意,这个时候你的WEB项目还没有完全启动完成.这个动作会比所有的Servlet都要早. </span><br /><span style="color:#4f4f4f;">换句话说,这个时候,你对&lt;context-param&gt;中的键值做的操作,将在你的WEB项目完全启动之前被执行. </span><br /><br /><span style="color:#4f4f4f;">7.举例.你可能想在项目启动之前就打开数据库. </span><br /><span style="color:#4f4f4f;">那么这里就可以在&lt;context-param&gt;中设置数据库的连接方式,在监听类中初始化数据库的连接. </span><br /><br /><span style="color:#4f4f4f;">8.这个监听是自己写的一个类,除了初始化方法,它还有销毁方法.用于关闭应用前释放资源.比如说数据库连接的关闭.</span><br /><a href="http://blog.csdn.net/dragonfly0939/article/details/3169686">http://blog.csdn.net/dragonfly0939/article/details/3169686</a><br /><br /><br />谈谈对Spring IOC的理解:<a href="http://blog.csdn.net/qq_22654611/article/details/52606960">http://blog.csdn.net/qq_22654611/article/details/52606960</a><br /></div></div>
+</body></html>

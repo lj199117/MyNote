@@ -1,0 +1,91 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>mysql知识总结</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+<body><div class="main"><div class="tree">
+<p><strong>Index</strong></p>
+<p><a href="webull工作.html">webull工作</a></p>
+
+<p><a href="Maven.html">Maven</a></p>
+
+<ol>
+<li><a href="Maven--distributionManagement.html">distributionManagement</a></li>
+</ol>
+<p><a href="架构相关.html">架构相关</a></p>
+
+<ol>
+<li><a href="架构相关--关于dubbo.html">关于dubbo</a></li>
+<li><a href="架构相关--POM结构图.html">POM结构图</a></li>
+<li><a href="架构相关--dbuuo基础架构.html">dbuuo基础架构</a></li>
+</ol>
+<p><a href="zk的配置与部署.html">zk的配置与部署</a></p>
+
+<p><a href="linux.html">linux</a></p>
+
+<ol>
+<li><a href="linux--linux的Java环境配置.html">linux的Java环境配置</a></li>
+<li><a href="linux--服务器远程拷贝.html">服务器远程拷贝</a></li>
+<li><a href="linux--linux_系统相关常用.html">linux 系统相关常用</a></li>
+</ol>
+<p><a href="月总结.html">月总结</a></p>
+
+<ol>
+<li><a href="月总结--18-02(md5_mysql相关).html">18-02(md5 mysql相关)</a></li>
+<li><a href="月总结--18-03-07(一个项目是如何run的).html">18-03-07(一个项目是如何run的)</a></li>
+<li><a href="月总结--18-03-08(自我评价).html">18-03-08(自我评价)</a></li>
+<li><a href="月总结--18-03-09(maven).html">18-03-09(maven)</a></li>
+<li><a href="月总结--18-03-20_xml.html">18-03-20 xml</a></li>
+<li><a href="月总结--18-03-22_app.xml各节点解析.html">18-03-22 app.xml各节点解析</a></li>
+<li><a href="月总结--18-04-01_Spring_父子容器.html">18-04-01 Spring 父子容器</a></li>
+</ol>
+<p><a href="快速调试方法.html">快速调试方法</a></p>
+
+<ol>
+<li><a href="快速调试方法--log.html">log</a></li>
+<li><a href="快速调试方法--debug远程项目.html">debug远程项目</a></li>
+<li><a href="快速调试方法--项目实施异常解决过程.html">项目实施异常解决过程</a></li>
+</ol>
+<p><a href="git.html">git</a></p>
+
+<p><a href="redis.html">redis</a></p>
+
+<ol>
+<li><a href="redis--redis的安装与主从复制.html">redis的安装与主从复制</a></li>
+<li><a href="redis--Redis集群搭建与简单使用.html">Redis集群搭建与简单使用</a></li>
+<li><a href="redis--redis操作.html">redis操作</a></li>
+</ol>
+<p><a href="AOP--Filter使用，过滤器和拦截器的区别.html">AOP--Filter使用，过滤器和拦截器的区别</a></p>
+
+<p><a href="VM分析.html">VM分析</a></p>
+
+<ol>
+<li><a href="VM分析--死锁分析.html">死锁分析</a></li>
+<li><a href="VM分析--jstack排查定位线程.html">jstack排查定位线程</a></li>
+<li><a href="VM分析--jmap,jhat,jstat,hprof使用和分析.html">jmap,jhat,jstat,hprof使用和分析</a></li>
+</ol>
+<p><a href="JMS_-_MQ.html">JMS - MQ</a></p>
+
+<ol>
+<li><a href="JMS_-_MQ--消息队列基本知识.html">消息队列基本知识</a></li>
+<li><a href="JMS_-_MQ--kafak安装与使用.html">kafak安装与使用</a></li>
+<li><a href="JMS_-_MQ--kafka集群模式.html">kafka集群模式</a></li>
+<li><a href="JMS_-_MQ--kafka-webull.html">kafka-webull</a></li>
+<li><a href="JMS_-_MQ--activeMq-JMS基本概念.html">activeMq-JMS基本概念</a></li>
+<li><a href="JMS_-_MQ--activeMq-MessageListenerContainer.html">activeMq-MessageListenerContainer</a></li>
+<li><a href="JMS_-_MQ--activeMq-三种消息监听器.html">activeMq-三种消息监听器</a></li>
+<li><a href="JMS_-_MQ--AMQ可靠消息传送.html">AMQ可靠消息传送</a></li>
+<li><a href="JMS_-_MQ--activeMq在项目中基本使用.html">activeMq在项目中基本使用</a></li>
+</ol>
+<p><a href="高并发.html">高并发</a></p>
+
+<p><a href="mysql数据库设计开发最佳实践.html">mysql数据库设计开发最佳实践</a></p>
+
+<ol>
+<li><a href="mysql数据库设计开发最佳实践--存储过程.html">存储过程</a></li>
+<li><a href="mysql数据库设计开发最佳实践--mysql知识总结.html">mysql知识总结</a></li>
+</ol></div>
+<div class="page"><h1><b><u>mysql知识总结</u></b></h1>唯一键约束是通过参考索引实施的，如果插入的值均为NULL，则根据索引的原理，全NULL值不被记录在索引上，所以插入全NULL值时，可以有重复的，而其他的则不能插入重复值。<br /><img src="images\25-1.png" alt="images\25-1.png" /><br />两列是联合唯一索引,但是可以正常存在<br /><br /><br /><br /><img src="images\25-2.png" alt="images\25-2.png" /><img src="images\25-3.png" alt="images\25-3.png" /><br /><div class="codebox"><div class="codebox"><span style="color:#ff9d00;font-weight:700">SELECT</span>&nbsp;a.*,b.*&nbsp;<span style="color:#ff9d00;font-weight:700">FROM</span>&nbsp;a,&nbsp;b&nbsp;<span style="color:#ff9d00;font-weight:700">WHERE</span>&nbsp;a.id&nbsp;=&nbsp;b.age;<br /><br /><span style="color:#ff9d00;font-weight:700">SELECT</span>&nbsp;*&nbsp;<span style="color:#ff9d00;font-weight:700">from</span>&nbsp;a&nbsp;<span style="color:#ff9d00;font-weight:700">inner</span>&nbsp;<span style="color:#ff9d00;font-weight:700">JOIN</span>&nbsp;b&nbsp;<span style="color:#ff9d00;font-weight:700">on</span>&nbsp;a.id&nbsp;=&nbsp;b.age;&nbsp;<span style="color:#0088ff;font-weight:400">--&nbsp;和上面要表达的意思一致</span><br /><br /><span style="color:#ff9d00;font-weight:700">SELECT</span>&nbsp;*&nbsp;<span style="color:#ff9d00;font-weight:700">from</span>&nbsp;a&nbsp;<span style="color:#ff9d00;font-weight:700">left</span>&nbsp;<span style="color:#ff9d00;font-weight:700">JOIN</span>&nbsp;b&nbsp;<span style="color:#ff9d00;font-weight:700">on</span>&nbsp;a.id&nbsp;=&nbsp;b.age;<br /><br /><span style="color:#ff9d00;font-weight:700">SELECT</span>&nbsp;*&nbsp;<span style="color:#ff9d00;font-weight:700">from</span>&nbsp;a&nbsp;<span style="color:#ff9d00;font-weight:700">right</span>&nbsp;<span style="color:#ff9d00;font-weight:700">JOIN</span>&nbsp;b&nbsp;<span style="color:#ff9d00;font-weight:700">on</span>&nbsp;a.id&nbsp;=&nbsp;b.age;</div></div><br />结果：<br /><img src="images\25-4.png" alt="images\25-4.png" /><img src="images\25-5.png" alt="images\25-5.png" /><br /><br /><img src="images\25-6.png" alt="images\25-6.png" /><img src="images\25-7.png" alt="images\25-7.png" /></div></div>
+</body></html>

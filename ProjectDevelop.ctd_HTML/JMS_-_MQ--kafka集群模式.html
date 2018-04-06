@@ -1,0 +1,91 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>kafka集群模式</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+<body><div class="main"><div class="tree">
+<p><strong>Index</strong></p>
+<p><a href="webull工作.html">webull工作</a></p>
+
+<p><a href="Maven.html">Maven</a></p>
+
+<ol>
+<li><a href="Maven--distributionManagement.html">distributionManagement</a></li>
+</ol>
+<p><a href="架构相关.html">架构相关</a></p>
+
+<ol>
+<li><a href="架构相关--关于dubbo.html">关于dubbo</a></li>
+<li><a href="架构相关--POM结构图.html">POM结构图</a></li>
+<li><a href="架构相关--dbuuo基础架构.html">dbuuo基础架构</a></li>
+</ol>
+<p><a href="zk的配置与部署.html">zk的配置与部署</a></p>
+
+<p><a href="linux.html">linux</a></p>
+
+<ol>
+<li><a href="linux--linux的Java环境配置.html">linux的Java环境配置</a></li>
+<li><a href="linux--服务器远程拷贝.html">服务器远程拷贝</a></li>
+<li><a href="linux--linux_系统相关常用.html">linux 系统相关常用</a></li>
+</ol>
+<p><a href="月总结.html">月总结</a></p>
+
+<ol>
+<li><a href="月总结--18-02(md5_mysql相关).html">18-02(md5 mysql相关)</a></li>
+<li><a href="月总结--18-03-07(一个项目是如何run的).html">18-03-07(一个项目是如何run的)</a></li>
+<li><a href="月总结--18-03-08(自我评价).html">18-03-08(自我评价)</a></li>
+<li><a href="月总结--18-03-09(maven).html">18-03-09(maven)</a></li>
+<li><a href="月总结--18-03-20_xml.html">18-03-20 xml</a></li>
+<li><a href="月总结--18-03-22_app.xml各节点解析.html">18-03-22 app.xml各节点解析</a></li>
+<li><a href="月总结--18-04-01_Spring_父子容器.html">18-04-01 Spring 父子容器</a></li>
+</ol>
+<p><a href="快速调试方法.html">快速调试方法</a></p>
+
+<ol>
+<li><a href="快速调试方法--log.html">log</a></li>
+<li><a href="快速调试方法--debug远程项目.html">debug远程项目</a></li>
+<li><a href="快速调试方法--项目实施异常解决过程.html">项目实施异常解决过程</a></li>
+</ol>
+<p><a href="git.html">git</a></p>
+
+<p><a href="redis.html">redis</a></p>
+
+<ol>
+<li><a href="redis--redis的安装与主从复制.html">redis的安装与主从复制</a></li>
+<li><a href="redis--Redis集群搭建与简单使用.html">Redis集群搭建与简单使用</a></li>
+<li><a href="redis--redis操作.html">redis操作</a></li>
+</ol>
+<p><a href="AOP--Filter使用，过滤器和拦截器的区别.html">AOP--Filter使用，过滤器和拦截器的区别</a></p>
+
+<p><a href="VM分析.html">VM分析</a></p>
+
+<ol>
+<li><a href="VM分析--死锁分析.html">死锁分析</a></li>
+<li><a href="VM分析--jstack排查定位线程.html">jstack排查定位线程</a></li>
+<li><a href="VM分析--jmap,jhat,jstat,hprof使用和分析.html">jmap,jhat,jstat,hprof使用和分析</a></li>
+</ol>
+<p><a href="JMS_-_MQ.html">JMS - MQ</a></p>
+
+<ol>
+<li><a href="JMS_-_MQ--消息队列基本知识.html">消息队列基本知识</a></li>
+<li><a href="JMS_-_MQ--kafak安装与使用.html">kafak安装与使用</a></li>
+<li><a href="JMS_-_MQ--kafka集群模式.html">kafka集群模式</a></li>
+<li><a href="JMS_-_MQ--kafka-webull.html">kafka-webull</a></li>
+<li><a href="JMS_-_MQ--activeMq-JMS基本概念.html">activeMq-JMS基本概念</a></li>
+<li><a href="JMS_-_MQ--activeMq-MessageListenerContainer.html">activeMq-MessageListenerContainer</a></li>
+<li><a href="JMS_-_MQ--activeMq-三种消息监听器.html">activeMq-三种消息监听器</a></li>
+<li><a href="JMS_-_MQ--AMQ可靠消息传送.html">AMQ可靠消息传送</a></li>
+<li><a href="JMS_-_MQ--activeMq在项目中基本使用.html">activeMq在项目中基本使用</a></li>
+</ol>
+<p><a href="高并发.html">高并发</a></p>
+
+<p><a href="mysql数据库设计开发最佳实践.html">mysql数据库设计开发最佳实践</a></p>
+
+<ol>
+<li><a href="mysql数据库设计开发最佳实践--存储过程.html">存储过程</a></li>
+<li><a href="mysql数据库设计开发最佳实践--mysql知识总结.html">mysql知识总结</a></li>
+</ol></div>
+<div class="page"><h1><b><u>kafka集群模式</u></b></h1>已有kafka： port:9099 / config:server.properties / broker.id:8<br /><br />集群模式需要在同一个目录（config）下配置多个server.properties<br />server-1.properties &amp; server-2.properties<br /><div class="codebox"><div class="codebox">config/server-1.properties:<br />&nbsp;&nbsp;&nbsp;&nbsp;broker.id=1<br />&nbsp;&nbsp;&nbsp;&nbsp;port=9093<br />&nbsp;&nbsp;&nbsp;&nbsp;log.dir=/tmp/kafka-logs-1<br />&nbsp;<br />config/server-2.properties:<br />&nbsp;&nbsp;&nbsp;&nbsp;broker.id=2<br />&nbsp;&nbsp;&nbsp;&nbsp;port=9094<br />&nbsp;&nbsp;&nbsp;&nbsp;log.dir=/tmp/kafka-logs-2</div></div><br /><br />启动服务：<br />bin/kafka-server-start.sh config/server-1.properties &amp;<br />bin/kafka-server-start.sh config/server-2.properties &amp;<br /><br /><span style="color:#f30404;">查看kafka的broker.id的占用情况</span>：<br />broker的配置文件中有zk的地址,也有自己的brokerId, 当broker启动后,会在zk新建一个znode,访问zk很简单,<br />执行<span style="color:#f30404;">zk_home/bin/zkCli.sh</span> <br />然后执行<span style="color:#f30404;">ls /brokers/ids</span> 就可以看到zk中存的所有的broker id list<br />[zk: localhost:2181(CONNECTED) 1] ls /brokers/ids<br />[0, 2, 3, 30]<br /><br /><br />实战：在40.203环境<br />首先通过zk得知brokers已经占用了2这个id, 我们的集群准备占用broker.id=4，5 ，端口分别9097，9098<br />然后启动服务<br /><br /><span style="color:#454545;">创建topic</span>: --create<br /><div class="codebox"><div class="codebox">myuser@fm3:/data/myuser/kafka/kafka_2.12-0.11.0.2$&nbsp;bin/kafka-topics.sh&nbsp;--create&nbsp;--zookeeper&nbsp;localhost:2181&nbsp;--replication-factor&nbsp;3&nbsp;--partitions&nbsp;1&nbsp;--topic&nbsp;my-replicated-topic<br />Created&nbsp;topic&nbsp;"my-replicated-topic".<br /><br />//&nbsp;查看描述信息<br />bin/kafka-topics.sh&nbsp;--describe&nbsp;--zookeeper&nbsp;localhost:2181&nbsp;--topic&nbsp;my-replicated-topic<br /><br />//&nbsp;增加Topic分区<br />bin/kafka-topics.sh&nbsp;--zookeeper&nbsp;localhost:2181&nbsp;--alter&nbsp;--partitions&nbsp;3&nbsp;--topic&nbsp;my-replicated-topic<br />Adding&nbsp;partitions&nbsp;succeeded!</div></div><br /><br /><br />查看<strong><span style="color:#454545;">描述topic中分区</span></strong>信息<br /><img src="images\17-1.png" alt="images\17-1.png" /><br /><img src="images\17-2.png" alt="images\17-2.png" /><br /><br /><br /><br /><h3>作为生产者发送消息</h3><br />bin/kafka-console-producer.sh --broker-list localhost:<span style="color:#f30404;">9097</span> --topic my-replicated-topic<br /><br /><h3>消费topic数据</h3><br />bin/kafka-console-consumer.sh --zookeeper localhost:2181 --from-beginning --topic my-replicated-topic<br /></div></div>
+</body></html>

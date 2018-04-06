@@ -1,0 +1,91 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Redis集群搭建与简单使用</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+<body><div class="main"><div class="tree">
+<p><strong>Index</strong></p>
+<p><a href="webull工作.html">webull工作</a></p>
+
+<p><a href="Maven.html">Maven</a></p>
+
+<ol>
+<li><a href="Maven--distributionManagement.html">distributionManagement</a></li>
+</ol>
+<p><a href="架构相关.html">架构相关</a></p>
+
+<ol>
+<li><a href="架构相关--关于dubbo.html">关于dubbo</a></li>
+<li><a href="架构相关--POM结构图.html">POM结构图</a></li>
+<li><a href="架构相关--dbuuo基础架构.html">dbuuo基础架构</a></li>
+</ol>
+<p><a href="zk的配置与部署.html">zk的配置与部署</a></p>
+
+<p><a href="linux.html">linux</a></p>
+
+<ol>
+<li><a href="linux--linux的Java环境配置.html">linux的Java环境配置</a></li>
+<li><a href="linux--服务器远程拷贝.html">服务器远程拷贝</a></li>
+<li><a href="linux--linux_系统相关常用.html">linux 系统相关常用</a></li>
+</ol>
+<p><a href="月总结.html">月总结</a></p>
+
+<ol>
+<li><a href="月总结--18-02(md5_mysql相关).html">18-02(md5 mysql相关)</a></li>
+<li><a href="月总结--18-03-07(一个项目是如何run的).html">18-03-07(一个项目是如何run的)</a></li>
+<li><a href="月总结--18-03-08(自我评价).html">18-03-08(自我评价)</a></li>
+<li><a href="月总结--18-03-09(maven).html">18-03-09(maven)</a></li>
+<li><a href="月总结--18-03-20_xml.html">18-03-20 xml</a></li>
+<li><a href="月总结--18-03-22_app.xml各节点解析.html">18-03-22 app.xml各节点解析</a></li>
+<li><a href="月总结--18-04-01_Spring_父子容器.html">18-04-01 Spring 父子容器</a></li>
+</ol>
+<p><a href="快速调试方法.html">快速调试方法</a></p>
+
+<ol>
+<li><a href="快速调试方法--log.html">log</a></li>
+<li><a href="快速调试方法--debug远程项目.html">debug远程项目</a></li>
+<li><a href="快速调试方法--项目实施异常解决过程.html">项目实施异常解决过程</a></li>
+</ol>
+<p><a href="git.html">git</a></p>
+
+<p><a href="redis.html">redis</a></p>
+
+<ol>
+<li><a href="redis--redis的安装与主从复制.html">redis的安装与主从复制</a></li>
+<li><a href="redis--Redis集群搭建与简单使用.html">Redis集群搭建与简单使用</a></li>
+<li><a href="redis--redis操作.html">redis操作</a></li>
+</ol>
+<p><a href="AOP--Filter使用，过滤器和拦截器的区别.html">AOP--Filter使用，过滤器和拦截器的区别</a></p>
+
+<p><a href="VM分析.html">VM分析</a></p>
+
+<ol>
+<li><a href="VM分析--死锁分析.html">死锁分析</a></li>
+<li><a href="VM分析--jstack排查定位线程.html">jstack排查定位线程</a></li>
+<li><a href="VM分析--jmap,jhat,jstat,hprof使用和分析.html">jmap,jhat,jstat,hprof使用和分析</a></li>
+</ol>
+<p><a href="JMS_-_MQ.html">JMS - MQ</a></p>
+
+<ol>
+<li><a href="JMS_-_MQ--消息队列基本知识.html">消息队列基本知识</a></li>
+<li><a href="JMS_-_MQ--kafak安装与使用.html">kafak安装与使用</a></li>
+<li><a href="JMS_-_MQ--kafka集群模式.html">kafka集群模式</a></li>
+<li><a href="JMS_-_MQ--kafka-webull.html">kafka-webull</a></li>
+<li><a href="JMS_-_MQ--activeMq-JMS基本概念.html">activeMq-JMS基本概念</a></li>
+<li><a href="JMS_-_MQ--activeMq-MessageListenerContainer.html">activeMq-MessageListenerContainer</a></li>
+<li><a href="JMS_-_MQ--activeMq-三种消息监听器.html">activeMq-三种消息监听器</a></li>
+<li><a href="JMS_-_MQ--AMQ可靠消息传送.html">AMQ可靠消息传送</a></li>
+<li><a href="JMS_-_MQ--activeMq在项目中基本使用.html">activeMq在项目中基本使用</a></li>
+</ol>
+<p><a href="高并发.html">高并发</a></p>
+
+<p><a href="mysql数据库设计开发最佳实践.html">mysql数据库设计开发最佳实践</a></p>
+
+<ol>
+<li><a href="mysql数据库设计开发最佳实践--存储过程.html">存储过程</a></li>
+<li><a href="mysql数据库设计开发最佳实践--mysql知识总结.html">mysql知识总结</a></li>
+</ol></div>
+<div class="page"><h1><b><u>Redis集群搭建与简单使用</u></b></h1><a href="https://www.cnblogs.com/wuxl360/p/5920330.html">https://www.cnblogs.com/wuxl360/p/5920330.html</a><br /><br />需要注意的是：必须要3个或以上的主节点，否则在创建集群时会失败，并且当存活的主节点数小于总节点数的一半时，整个集群就无法提供服务了。<br /><br />用两台虚拟机模拟6个节点，一台机器3个节点，创建出3 master、3 salve 环境。<br /><br />编译安装：<br />wget <a href="http://download.redis.io/releases/redis-4.0.2.tar.gz">http://download.redis.io/releases/redis-4.0.2.tar.gz</a><br />cd redis-4.0.2<br />make &amp;&amp; make install<br /><br /><span style="color:#f30404;">203机器：</span><br />拷贝trib文件<br />myuser@fm3:/data/myuser/redis-4.0.2$ cp src/<span style="color:#f30404;">redis-trib.rb</span> redis/bin/<br /><br />建立节点目录<br />myuser@fm3:/data/myuser/redis-4.0.2$ mkdir redis-1 redis-2  (之<span style="color:#f30404;">前有个redis port:6479已经部署了</span>)<br /><br /> redis.conf 拷贝到这2个目录中<br />myuser@fm3:/data/myuser/redis-4.0.2$ cp redis/etc/redis.conf ./redis-1/ ; cp redis/etc/redis.conf  ./redis-2/<br /><br />配置conf:<br />port  7000                                    //端口分别7000,7001,6479【7002】        <br />bind 本机ip                             //默认ip为127.0.0.1 需要改为其他节点机器可访问的ip 否则创建集群时无法访问对应的端口，无法创建集群<br />daemonize    yes                          //redis后台运行<br />pidfile  /var/run/redis_7000.pid          //pidfile文件对应7000,7001,7002<br />cluster-enabled  yes                           //<span style="color:#f30404;">开启集群</span>  把注释#去掉<br />cluster-config-file  nodes_7000.conf   //集群的配置  配置文件首次启动自动生成 7000,7001,7002<br />cluster-node-timeout  15000                //请求超时  默认15秒，可自行设置<br />appendonly  yes                           //aof日志开启  有需要就开启，它会每次写操作都记录一条日志<br /><br />• 接着在另外一台机器上（<span style="color:#f30404;">202</span>），的操作重复以上三步，只是把目录改为7003、7004、7005，对应的配置文件也按照这个规则修改即可<br /><br />分别启动两台机器<br />myuser@fm3:/data/myuser/redis-4.0.2/redis/bin$ ps -ef | grep redis<br />redis     1512     1  0 8月07 ?       01:27:47 redis-server *:6379<br />myuser   11813     1  0 09:32 ?        00:00:00 ./redis-server 192.168.40.203:7000 [<span style="color:#f30404;">cluster</span>]<br />myuser   11821     1  0 09:32 ?        00:00:00 ./redis-server 192.168.40.203:7001 [<span style="color:#f30404;">cluster</span>]<br />myuser   12245     1  0 09:36 ?        00:00:00 ./redis-server 192.168.40.203:6479 [<span style="color:#f30404;">cluster</span>]<br /><br /><br />myuser@fm2:/data/myuser/redis-4.0.2/src$ ps -ef | grep redis<br />redis     2356     1  0 11月23 ?      00:01:02 redis-server *:6379<br />myuser   11234     1  0 09:31 ?        00:00:00 ./redis-server 192.168.40.202:7003 [cluster]<br />myuser   11240     1  0 09:31 ?        00:00:00 ./redis-server 192.168.40.202:7004 [cluster]<br />myuser   11245     1  0 09:31 ?        00:00:00 ./redis-server 192.168.40.202:7005 [cluster]<br /><br />最后<span style="color:#f30404;">创建集群</span><br />Redis 官方提供了<span style="color:#f30404;"> redis-trib.rb 这个工具</span><br />redis-trib.rb  create  --replicas  <span style="color:#800080;">1</span>  <span style="color:#a020f0;">192.168.40.203:7000 192.168.40.203:7001  192.168.40.203:6479 192.168.40.202:7003  192.168.40.202:7004  192.168.40.202:7005</span><br /><br />可能错误：<br />myuser@fm3:/data/myuser/redis-4.0.2/redis/bin$ ./redis-trib.rb  create  --replicas  1  192.168.40.203:7000 192.168.40.203:7001  192.168.40.203:6479 192.168.40.202:7003  192.168.40.202:7004  192.168.40.202:7005<br />/usr/bin/env: "ruby": 没有那个文件或目录<br />myuser@fm3:/data/myuser/redis-4.0.2/redis/bin$ <br /><br />yum -y install ruby ruby-devel rubygems rpm-build<br />gem install redis<br /></div></div>
+</body></html>

@@ -1,0 +1,91 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>18-04-01 Spring 父子容器</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+<body><div class="main"><div class="tree">
+<p><strong>Index</strong></p>
+<p><a href="webull工作.html">webull工作</a></p>
+
+<p><a href="Maven.html">Maven</a></p>
+
+<ol>
+<li><a href="Maven--distributionManagement.html">distributionManagement</a></li>
+</ol>
+<p><a href="架构相关.html">架构相关</a></p>
+
+<ol>
+<li><a href="架构相关--关于dubbo.html">关于dubbo</a></li>
+<li><a href="架构相关--POM结构图.html">POM结构图</a></li>
+<li><a href="架构相关--dbuuo基础架构.html">dbuuo基础架构</a></li>
+</ol>
+<p><a href="zk的配置与部署.html">zk的配置与部署</a></p>
+
+<p><a href="linux.html">linux</a></p>
+
+<ol>
+<li><a href="linux--linux的Java环境配置.html">linux的Java环境配置</a></li>
+<li><a href="linux--服务器远程拷贝.html">服务器远程拷贝</a></li>
+<li><a href="linux--linux_系统相关常用.html">linux 系统相关常用</a></li>
+</ol>
+<p><a href="月总结.html">月总结</a></p>
+
+<ol>
+<li><a href="月总结--18-02(md5_mysql相关).html">18-02(md5 mysql相关)</a></li>
+<li><a href="月总结--18-03-07(一个项目是如何run的).html">18-03-07(一个项目是如何run的)</a></li>
+<li><a href="月总结--18-03-08(自我评价).html">18-03-08(自我评价)</a></li>
+<li><a href="月总结--18-03-09(maven).html">18-03-09(maven)</a></li>
+<li><a href="月总结--18-03-20_xml.html">18-03-20 xml</a></li>
+<li><a href="月总结--18-03-22_app.xml各节点解析.html">18-03-22 app.xml各节点解析</a></li>
+<li><a href="月总结--18-04-01_Spring_父子容器.html">18-04-01 Spring 父子容器</a></li>
+</ol>
+<p><a href="快速调试方法.html">快速调试方法</a></p>
+
+<ol>
+<li><a href="快速调试方法--log.html">log</a></li>
+<li><a href="快速调试方法--debug远程项目.html">debug远程项目</a></li>
+<li><a href="快速调试方法--项目实施异常解决过程.html">项目实施异常解决过程</a></li>
+</ol>
+<p><a href="git.html">git</a></p>
+
+<p><a href="redis.html">redis</a></p>
+
+<ol>
+<li><a href="redis--redis的安装与主从复制.html">redis的安装与主从复制</a></li>
+<li><a href="redis--Redis集群搭建与简单使用.html">Redis集群搭建与简单使用</a></li>
+<li><a href="redis--redis操作.html">redis操作</a></li>
+</ol>
+<p><a href="AOP--Filter使用，过滤器和拦截器的区别.html">AOP--Filter使用，过滤器和拦截器的区别</a></p>
+
+<p><a href="VM分析.html">VM分析</a></p>
+
+<ol>
+<li><a href="VM分析--死锁分析.html">死锁分析</a></li>
+<li><a href="VM分析--jstack排查定位线程.html">jstack排查定位线程</a></li>
+<li><a href="VM分析--jmap,jhat,jstat,hprof使用和分析.html">jmap,jhat,jstat,hprof使用和分析</a></li>
+</ol>
+<p><a href="JMS_-_MQ.html">JMS - MQ</a></p>
+
+<ol>
+<li><a href="JMS_-_MQ--消息队列基本知识.html">消息队列基本知识</a></li>
+<li><a href="JMS_-_MQ--kafak安装与使用.html">kafak安装与使用</a></li>
+<li><a href="JMS_-_MQ--kafka集群模式.html">kafka集群模式</a></li>
+<li><a href="JMS_-_MQ--kafka-webull.html">kafka-webull</a></li>
+<li><a href="JMS_-_MQ--activeMq-JMS基本概念.html">activeMq-JMS基本概念</a></li>
+<li><a href="JMS_-_MQ--activeMq-MessageListenerContainer.html">activeMq-MessageListenerContainer</a></li>
+<li><a href="JMS_-_MQ--activeMq-三种消息监听器.html">activeMq-三种消息监听器</a></li>
+<li><a href="JMS_-_MQ--AMQ可靠消息传送.html">AMQ可靠消息传送</a></li>
+<li><a href="JMS_-_MQ--activeMq在项目中基本使用.html">activeMq在项目中基本使用</a></li>
+</ol>
+<p><a href="高并发.html">高并发</a></p>
+
+<p><a href="mysql数据库设计开发最佳实践.html">mysql数据库设计开发最佳实践</a></p>
+
+<ol>
+<li><a href="mysql数据库设计开发最佳实践--存储过程.html">存储过程</a></li>
+<li><a href="mysql数据库设计开发最佳实践--mysql知识总结.html">mysql知识总结</a></li>
+</ol></div>
+<div class="page"><h1><b><u>18-04-01 Spring 父子容器</u></b></h1><br />Spring和SpringMVC父子容器关系初窥<br /><a href="https://www.cnblogs.com/hafiz/p/5875740.html">https://www.cnblogs.com/hafiz/p/5875740.html</a><br /><br />1. 概念与铺垫<br />• Spring整体框架为基础的项目中，Spring中可以包括多个容器，而且容器有上下层关系；<br />• 目前最常见的一种场景就是在一个项目中引入Spring和SpringMVC这两个框架<br />☐ Spring是父容器，SpringMVC是其子容器<br />☐ Spring父容器中注册的Bean对于SpringMVC容器中是可见的，而在<span style="color:#f30404;">SpringMVC容器中注册的Bean对于Spring父容器中是不可见的</span>（类似继承关系，子类可以强转为父类，反之不行）<br />• 工程实践过程<br />☐ 我们可以通过<span style="color:#f30404;">&lt;context:component-scan</span> base-package="xxx" /&gt; 扫描并注册所有使用了@Component注解的类，并且将它们自动注册到容器中，同时也扫描@Controller，@Service，@Respository这三个注解，因为他们是继承自@Component;<br />☐ &lt;context:component-scan&gt;配置会默认打开<span style="color:#f30404;">&lt;context:annotation-config/&gt;</span>配置。该配置会默认声明了@Required、@Autowired、 @PostConstruct、@PersistenceContext、@Resource、@PreDestroy等注解；<br />☐ 还有一个和SpringMVC相关的<span style="color:#f30404;">&lt;mvc:annotation-driven /&gt;</span>配置，这个是SpringMVC必须要配置的，因为它声明了@RequestMapping、@RequestBody、@ResponseBody等；<br /><br />2. 具体场景分析：<br />• Spring与SpringMVC的容器冲突的原因到底在那里？<br />假设有Spring和SpringMVC两个容器，它们的配置文件分别为applicationContext.xml和applicationContext-MVC.xml。<br />☐ applicationContext.xml中配置了&lt;context:component-scan base-package=“xxx" /&gt;，负责所有需要注册的Bean的扫描和注册工作。<br />☐ applicationContext-MVC.xml中配置&lt;mvc:annotation-driven /&gt;，负责SpringMVC相关注解的使用。<br /><span style="color:#f30404;">结果可以发现SpringMVC容器中的请求没有映射到具体controller中</span>；<br />☐ 若在applicationContext-MVC.xml中增加配置&lt;context:component-scan base-package=“cxxx" /&gt; 则发现请求有效<br />• 原因分析<br />从SpringMVC的DispatcherServlet开始往下找，我们发现SpringMVC初始化时，会寻找<span style="color:#f30404;">SpringMVC容器中的所有使用了@Controller注解的Bean</span>，来确定其是否是一个handler，但我们在applicationContext-MVC.xml并没有配置注册带有@Controller注解的Bean，所有<span style="color:#f30404;">带有@Controller注解的Bean都注册在Spring这个父容器中了</span>，所以springMVC找不到处理器，不能进行跳转。<br />（注：<br />☐ <span style="color:#464646;background-color:#98ddff;">子容器springmvc是可以访问到父容器spring中的bean，但是默认情况下，springmvc只会在自己容器中查找所有的controller并不会去父容器中查找，所以把所有的bean都注册到spring容器中，访问不到</span>；<br />☐ <span style="color:#505050;background-color:#add8e6;">官方推荐根据不同的业务模块来划分不同容器中注册不同类型的Bean：Spring父容器负责所有其他非@Controller注解的Bean的注册，而SpringMVC只负责@Controller注解的Bean的注册，使得他们各负其责、明确边界。</span>）<br />• 解决方法<br />☐ 公司<br /><div class="codebox"><div class="codebox">app.xml<br />&lt;context:component-scan&nbsp;base-package="com.webull.app.center,com.webull.cms.client.cache"&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;context:exclude-filter&nbsp;type="regex"&nbsp;expression=".*Test"/&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;context:exclude-filter&nbsp;type="regex"&nbsp;expression=".*\.mvc\..*"/&gt;&nbsp;去掉了mvc整个包的controller<br />&lt;/context:component-scan&gt;<br /><br />servlet-app.xml<br />&lt;context:component-scan&nbsp;base-package="com.webull.app.center.mvc"&gt;　对整个包路径做了指定，不会有问题<br />	&lt;context:exclude-filter&nbsp;type="regex"&nbsp;expression=".*Test"/&gt;<br />&lt;/context:component-scan&gt;<br /><br /></div></div><br />☐ 网上推荐（为了解决隐藏的事务问题 use-default-filters）<br /><div class="codebox"><div class="codebox">app.xml<br /><span style="color:#0088ff;font-weight:400">&lt;!--&nbsp;Spring容器中注册非@controller注解的Bean&nbsp;--&gt;</span><br />&lt;context:component-scan&nbsp;base-package="com.hafiz.www"&gt;<br />&nbsp;&nbsp;&nbsp;&lt;context:exclude-filter&nbsp;type="annotation"&nbsp;expression="org.springframework.stereotype.Controller"/&gt;<br />&lt;/context:component-scan&gt;<br /><br />mvc.xml<br /><span style="color:#0088ff;font-weight:400">&lt;!--&nbsp;SpringMVC容器中只注册有@controller注解的Bean&nbsp;--&gt;</span><br />&lt;context:component-scan&nbsp;base-package="com.hafiz.www"&nbsp;use-default-filters="false"&gt;<br />&nbsp;&nbsp;&nbsp;&lt;context:include-filter&nbsp;type="annotation"&nbsp;expression="org.springframework.stereotype.Controller"&nbsp;/&gt;<br />&lt;/context:component-scan&gt;</div></div><br /><br />use-default-filters 这个属性的作用。<span style="color:#ff0000;">use-default-filters 属性的默认值为 true</span>，即<span style="color:#ff0000;">使用默认的 Filter 进行包扫描</span>，而<span style="color:#ff0000;">默认的 Filter 对标有 @Service,@Controller和@Repository 的注解的类进行扫描</span>，因为前面说过，我们<span style="color:#ff0000;">希望 SpringMVC.xml 只来控制网站的跳转逻辑，所以我们只希望 SpringMVC 的配置扫描 @Controllerce 注解标注的类</span>，不希望它扫描其余注解标注的类，所以<span style="color:#ff0000;">设置了 use-default-filters 为 false</span>，并使用 context:include-filter 子标签设置其只扫描带有 @Controller 注解标注的类。<br />而 Spring.xml 就不同了，我们<span style="color:#ff0000;">希望 Spring 只不扫描带有 @Controller 注解标注的类，而扫描其他注解标注的类</span>，而这时建立在使用默认的 Filter 进行扫描的基础上，设置了 context:exclude-filter 标签，不扫描 @Controller 注解标注的类，所以不应该设置 use-default-filters 为 false，否则启动 Tomcat 时会报一个找不到 Service 的错误。在使用 use-default-filters 属性时要<span style="color:#ff0000;">分清楚需要扫描哪些包，是不是需要使用默认的 Filter 进行扫描</span>。稍微总结一下，即 <span style="color:#99cc00;">use-default-filters="false" 需要和 context:include-filter 一起使用，而不能和 context:exclude-filter 属性一起使用</span>。<br /><br /><a href="https://www.jianshu.com/p/b8d5de66cb1c">https://www.jianshu.com/p/b8d5de66cb1c</a> 解释了为毛use-default-filters 造成事务失效，mvc.xml 对bean的重新加载刷新了spring.xml对bean的加载，造成aop事务切入点失败；所以解决方案：<br />1. 如果不需要默认的，则use-default-filters=“false”禁用掉。<br />2. 直接写明具体Controller包名称。<br /><br /><br /></div></div>
+</body></html>

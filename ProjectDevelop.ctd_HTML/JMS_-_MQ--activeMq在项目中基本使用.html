@@ -1,0 +1,91 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>activeMq在项目中基本使用</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+<body><div class="main"><div class="tree">
+<p><strong>Index</strong></p>
+<p><a href="webull工作.html">webull工作</a></p>
+
+<p><a href="Maven.html">Maven</a></p>
+
+<ol>
+<li><a href="Maven--distributionManagement.html">distributionManagement</a></li>
+</ol>
+<p><a href="架构相关.html">架构相关</a></p>
+
+<ol>
+<li><a href="架构相关--关于dubbo.html">关于dubbo</a></li>
+<li><a href="架构相关--POM结构图.html">POM结构图</a></li>
+<li><a href="架构相关--dbuuo基础架构.html">dbuuo基础架构</a></li>
+</ol>
+<p><a href="zk的配置与部署.html">zk的配置与部署</a></p>
+
+<p><a href="linux.html">linux</a></p>
+
+<ol>
+<li><a href="linux--linux的Java环境配置.html">linux的Java环境配置</a></li>
+<li><a href="linux--服务器远程拷贝.html">服务器远程拷贝</a></li>
+<li><a href="linux--linux_系统相关常用.html">linux 系统相关常用</a></li>
+</ol>
+<p><a href="月总结.html">月总结</a></p>
+
+<ol>
+<li><a href="月总结--18-02(md5_mysql相关).html">18-02(md5 mysql相关)</a></li>
+<li><a href="月总结--18-03-07(一个项目是如何run的).html">18-03-07(一个项目是如何run的)</a></li>
+<li><a href="月总结--18-03-08(自我评价).html">18-03-08(自我评价)</a></li>
+<li><a href="月总结--18-03-09(maven).html">18-03-09(maven)</a></li>
+<li><a href="月总结--18-03-20_xml.html">18-03-20 xml</a></li>
+<li><a href="月总结--18-03-22_app.xml各节点解析.html">18-03-22 app.xml各节点解析</a></li>
+<li><a href="月总结--18-04-01_Spring_父子容器.html">18-04-01 Spring 父子容器</a></li>
+</ol>
+<p><a href="快速调试方法.html">快速调试方法</a></p>
+
+<ol>
+<li><a href="快速调试方法--log.html">log</a></li>
+<li><a href="快速调试方法--debug远程项目.html">debug远程项目</a></li>
+<li><a href="快速调试方法--项目实施异常解决过程.html">项目实施异常解决过程</a></li>
+</ol>
+<p><a href="git.html">git</a></p>
+
+<p><a href="redis.html">redis</a></p>
+
+<ol>
+<li><a href="redis--redis的安装与主从复制.html">redis的安装与主从复制</a></li>
+<li><a href="redis--Redis集群搭建与简单使用.html">Redis集群搭建与简单使用</a></li>
+<li><a href="redis--redis操作.html">redis操作</a></li>
+</ol>
+<p><a href="AOP--Filter使用，过滤器和拦截器的区别.html">AOP--Filter使用，过滤器和拦截器的区别</a></p>
+
+<p><a href="VM分析.html">VM分析</a></p>
+
+<ol>
+<li><a href="VM分析--死锁分析.html">死锁分析</a></li>
+<li><a href="VM分析--jstack排查定位线程.html">jstack排查定位线程</a></li>
+<li><a href="VM分析--jmap,jhat,jstat,hprof使用和分析.html">jmap,jhat,jstat,hprof使用和分析</a></li>
+</ol>
+<p><a href="JMS_-_MQ.html">JMS - MQ</a></p>
+
+<ol>
+<li><a href="JMS_-_MQ--消息队列基本知识.html">消息队列基本知识</a></li>
+<li><a href="JMS_-_MQ--kafak安装与使用.html">kafak安装与使用</a></li>
+<li><a href="JMS_-_MQ--kafka集群模式.html">kafka集群模式</a></li>
+<li><a href="JMS_-_MQ--kafka-webull.html">kafka-webull</a></li>
+<li><a href="JMS_-_MQ--activeMq-JMS基本概念.html">activeMq-JMS基本概念</a></li>
+<li><a href="JMS_-_MQ--activeMq-MessageListenerContainer.html">activeMq-MessageListenerContainer</a></li>
+<li><a href="JMS_-_MQ--activeMq-三种消息监听器.html">activeMq-三种消息监听器</a></li>
+<li><a href="JMS_-_MQ--AMQ可靠消息传送.html">AMQ可靠消息传送</a></li>
+<li><a href="JMS_-_MQ--activeMq在项目中基本使用.html">activeMq在项目中基本使用</a></li>
+</ol>
+<p><a href="高并发.html">高并发</a></p>
+
+<p><a href="mysql数据库设计开发最佳实践.html">mysql数据库设计开发最佳实践</a></p>
+
+<ol>
+<li><a href="mysql数据库设计开发最佳实践--存储过程.html">存储过程</a></li>
+<li><a href="mysql数据库设计开发最佳实践--mysql知识总结.html">mysql知识总结</a></li>
+</ol></div>
+<div class="page"><h1><b><u>activeMq在项目中基本使用</u></b></h1><br />app文件配置mq服务器<br />jms.brokerURL=failover:(tcp://192.168.40.202:61616,tcp://192.168.40.204:61616)<br /><br />ActiveMQ默认启动时，启动了内置的jetty服务器，提供一个用于监控ActiveMQ的admin应用。 <br /><a href="http://192.168.40.202:8161/admin">http://192.168.40.202:8161/admin</a> ⇒ 账号密码：admin/admin<br /><br /><div class="codebox"><div class="codebox"><span style="color:#0088ff;font-weight:400">&lt;!--&nbsp;activeMQ&nbsp;start&nbsp;--&gt;</span><br />&lt;bean&nbsp;id="jmsPooledConnectionFactory"&nbsp;class="org.apache.activemq.pool.PooledConnectionFactory"&nbsp;destroy-method="stop"&gt;<br />	&lt;property&nbsp;name="connectionFactory"&gt;<br />		&lt;bean&nbsp;class="org.apache.activemq.ActiveMQConnectionFactory"&gt;<br />			&lt;property&nbsp;name="brokerURL"&nbsp;value="${jms.brokerURL}"/&gt;<br />			&lt;property&nbsp;name="sendTimeout"&nbsp;value="${jms.sendTimeout:3000}"/&gt;<br />			&lt;property&nbsp;name="redeliveryPolicy"&gt;<br />				&lt;bean&nbsp;class="org.apache.activemq.RedeliveryPolicy"&gt;<br />					&lt;property&nbsp;name="initialRedeliveryDelay"&nbsp;value="${jms.initialRedeliveryDelay:3000}"/&gt;<br />					&lt;property&nbsp;name="maximumRedeliveries"&nbsp;value="${jms.maximumRedeliveries:6}"/&gt;<br />				&lt;/bean&gt;<br />			&lt;/property&gt;<br />		&lt;/bean&gt;<br />	&lt;/property&gt;<br />	&lt;property&nbsp;name="maxConnections"&nbsp;value="${jms.maxConnections:20}"/&gt;<br />&lt;/bean&gt;<br />&lt;bean&nbsp;id="jmsTemplate"&nbsp;class="org.springframework.jms.core.JmsTemplate"&gt;<br />	&lt;property&nbsp;name="connectionFactory"&nbsp;ref="jmsPooledConnectionFactory"/&gt;<br />&lt;/bean&gt;<br /><br />&lt;bean&nbsp;id="awardNotifyQueue"&nbsp;class="org.apache.activemq.command.ActiveMQQueue"&gt;<br />	&lt;constructor-arg&nbsp;value="VirtualTopic.awardNotifyQueue"/&gt;<br />&lt;/bean&gt;<br /><br />&lt;task:scheduler&nbsp;id="scheduler"&nbsp;pool-size="${task.scheduler:20}"/&gt;<br />&lt;task:executor&nbsp;id="executor"&nbsp;pool-size="${task.executor:200}"/&gt;<br />&lt;task:annotation-driven&nbsp;executor="executor"&nbsp;scheduler="scheduler"/&gt;<br /><br />&lt;jms:listener-container&nbsp;connection-factory="jmsPooledConnectionFactory"&nbsp;task-executor="executor"&nbsp;destination-type="queue"&gt;<br />	&lt;jms:listener&nbsp;destination="VirtualTopic.awardNotifyQueue"&nbsp;ref="awardNotifyListener"&nbsp;method="onDeliver"/&gt;<br />&lt;/jms:listener-container&gt;</div></div><br /><br /><img src="images\14-1.png" alt="images\14-1.png" /><br /><br /><br /><br /><div class="codebox"><div class="codebox"><span style="color:#333333;font-weight:400">import</span>&nbsp;com.webull.framework.util.UtilJson;<br /><span style="color:#333333;font-weight:400">import</span>&nbsp;com.webull.invite.client.param.AwardNotifyParam;<br /><span style="color:#333333;font-weight:400">import</span>&nbsp;com.webull.invite.client.service.InviteService;<br /><span style="color:#333333;font-weight:400">import</span>&nbsp;org.apache.logging.log4j.LogManager;<br /><span style="color:#333333;font-weight:400">import</span>&nbsp;org.apache.logging.log4j.Logger;<br /><span style="color:#333333;font-weight:400">import</span>&nbsp;org.springframework.beans.factory.annotation.Autowired;<br /><span style="color:#333333;font-weight:400">import</span>&nbsp;org.springframework.stereotype.Component;<br /><br /><span style="color:#333333;font-weight:400">import</span>&nbsp;javax.annotation.PostConstruct;<br /><span style="color:#333333;font-weight:400">import</span>&nbsp;java.util.concurrent.BlockingQueue;<br /><span style="color:#333333;font-weight:400">import</span>&nbsp;java.util.concurrent.LinkedBlockingQueue;<br /><br />@Component<br /><span style="color:#7f0044;font-weight:400">public</span>&nbsp;<span style="color:#7f0044;font-weight:400">class</span>&nbsp;AwardNotifyListener&nbsp;<span style="color:#7f0044;font-weight:400">implements</span>&nbsp;Runnable&nbsp;{<br />	<span style="color:#7f0044;font-weight:400">protected</span>&nbsp;<span style="color:#7f0044;font-weight:400">final</span>&nbsp;Logger&nbsp;logger&nbsp;=&nbsp;LogManager.getLogger(getClass());<br /><br /><br />	<span style="color:#7f0044;font-weight:400">private</span>&nbsp;BlockingQueue&lt;AwardNotifyParam&gt;&nbsp;eventQueue&nbsp;=&nbsp;<span style="color:#ff9d00;font-weight:700">new</span>&nbsp;LinkedBlockingQueue&lt;&gt;();<br /><br />	@Autowired<br />	<span style="color:#7f0044;font-weight:400">private</span>&nbsp;InviteService&nbsp;inviteService;<br /><br />	@PostConstruct<br />	<span style="color:#7f0044;font-weight:400">private</span>&nbsp;<span style="color:#7f0044;font-weight:400">void</span>&nbsp;init()&nbsp;{<br /><br />		<span style="color:#0088ff;font-weight:400">//&nbsp;we&nbsp;need&nbsp;to&nbsp;refresh&nbsp;the&nbsp;cache&nbsp;data&nbsp;in&nbsp;memory&nbsp;immediately</span><br />		Thread&nbsp;t&nbsp;=&nbsp;<span style="color:#ff9d00;font-weight:700">new</span>&nbsp;Thread(<span style="color:#ff9d00;font-weight:700">this</span>);<br />		t.setDaemon(<span style="color:#ff0044;font-weight:400">true</span>);<br />		t.start();<br />	}<br /><br />	<span style="color:#7f0044;font-weight:400">public</span>&nbsp;<span style="color:#7f0044;font-weight:400">void</span>&nbsp;onDeliver(String&nbsp;message)&nbsp;{<br />		logger.debug(<span style="color:#3ad900;font-weight:400">"接收：{}"</span>,&nbsp;message);<br />		<span style="color:#ff9d00;font-weight:700">try</span>&nbsp;{<br />			AwardNotifyParam&nbsp;param&nbsp;=&nbsp;UtilJson.readValue0(message,&nbsp;AwardNotifyParam.<span style="color:#7f0044;font-weight:400">class</span>);<br />			logger.debug(<span style="color:#3ad900;font-weight:400">"奖励通知接收:{}"</span>,&nbsp;param);<br />			add(param);<br />		}&nbsp;<span style="color:#ff9d00;font-weight:700">catch</span>&nbsp;(Exception&nbsp;e)&nbsp;{<br />			logger.warn(<span style="color:#3ad900;font-weight:400">"json={},&nbsp;ex="</span>,&nbsp;message,&nbsp;e);<br />		}<br />	}<br /><br />	<span style="color:#7f0044;font-weight:400">public</span>&nbsp;<span style="color:#7f0044;font-weight:400">void</span>&nbsp;add(AwardNotifyParam&nbsp;param)&nbsp;<span style="color:#7f0044;font-weight:400">throws</span>&nbsp;InterruptedException&nbsp;{<br />		eventQueue.put(param);<br />	}<br /><br />	<span style="color:#7f0044;font-weight:400">public</span>&nbsp;<span style="color:#7f0044;font-weight:400">void</span>&nbsp;run()&nbsp;{<br /><br />		<span style="color:#ff9d00;font-weight:700">while</span>(<span style="color:#ff0044;font-weight:400">true</span>)&nbsp;{<br />			AwardNotifyParam&nbsp;param;<br />			<span style="color:#ff9d00;font-weight:700">try</span>&nbsp;{<br />				param&nbsp;=&nbsp;eventQueue.take();<br />			}&nbsp;<span style="color:#ff9d00;font-weight:700">catch</span>&nbsp;(InterruptedException&nbsp;e)&nbsp;{<br />				logger.error(<span style="color:#3ad900;font-weight:400">"error&nbsp;while&nbsp;take&nbsp;the&nbsp;event&nbsp;from&nbsp;the&nbsp;eventQueue."</span>,&nbsp;e);<br />				<span style="color:#ff9d00;font-weight:700">throw</span>&nbsp;<span style="color:#ff9d00;font-weight:700">new</span>&nbsp;RuntimeException(<span style="color:#3ad900;font-weight:400">"broke&nbsp;the&nbsp;thread."</span>,&nbsp;e);<br />			}<br /><br />			<span style="color:#ff9d00;font-weight:700">if</span>(param&nbsp;!=&nbsp;<span style="color:#ff0044;font-weight:700">null</span>&nbsp;)&nbsp;{<br />				inviteService.processAward(param);<br />			}<br />		}<br />	}<br />}<br /></div></div><br /><br /><br />运转过程：<br /><br />业务awardNotify() 将通知（JSON格式）加入到队列awardNotifyQueue -&gt;  awardNotifyListener这个监听器（一个Thread）通过onDeliver()方法持续接收信息，然后将该信息从json格式转为对象并将其加入eventQueue队列 -&gt; run从eventQuene中take()到信息进行消费param = eventQueue.take(); -&gt; 进行业务操作inviteService.processAward(param);<br /><br /><br /><br /></div></div>
+</body></html>

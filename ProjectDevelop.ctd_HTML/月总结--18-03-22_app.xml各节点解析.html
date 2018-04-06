@@ -1,0 +1,91 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>18-03-22 app.xml各节点解析</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+<body><div class="main"><div class="tree">
+<p><strong>Index</strong></p>
+<p><a href="webull工作.html">webull工作</a></p>
+
+<p><a href="Maven.html">Maven</a></p>
+
+<ol>
+<li><a href="Maven--distributionManagement.html">distributionManagement</a></li>
+</ol>
+<p><a href="架构相关.html">架构相关</a></p>
+
+<ol>
+<li><a href="架构相关--关于dubbo.html">关于dubbo</a></li>
+<li><a href="架构相关--POM结构图.html">POM结构图</a></li>
+<li><a href="架构相关--dbuuo基础架构.html">dbuuo基础架构</a></li>
+</ol>
+<p><a href="zk的配置与部署.html">zk的配置与部署</a></p>
+
+<p><a href="linux.html">linux</a></p>
+
+<ol>
+<li><a href="linux--linux的Java环境配置.html">linux的Java环境配置</a></li>
+<li><a href="linux--服务器远程拷贝.html">服务器远程拷贝</a></li>
+<li><a href="linux--linux_系统相关常用.html">linux 系统相关常用</a></li>
+</ol>
+<p><a href="月总结.html">月总结</a></p>
+
+<ol>
+<li><a href="月总结--18-02(md5_mysql相关).html">18-02(md5 mysql相关)</a></li>
+<li><a href="月总结--18-03-07(一个项目是如何run的).html">18-03-07(一个项目是如何run的)</a></li>
+<li><a href="月总结--18-03-08(自我评价).html">18-03-08(自我评价)</a></li>
+<li><a href="月总结--18-03-09(maven).html">18-03-09(maven)</a></li>
+<li><a href="月总结--18-03-20_xml.html">18-03-20 xml</a></li>
+<li><a href="月总结--18-03-22_app.xml各节点解析.html">18-03-22 app.xml各节点解析</a></li>
+<li><a href="月总结--18-04-01_Spring_父子容器.html">18-04-01 Spring 父子容器</a></li>
+</ol>
+<p><a href="快速调试方法.html">快速调试方法</a></p>
+
+<ol>
+<li><a href="快速调试方法--log.html">log</a></li>
+<li><a href="快速调试方法--debug远程项目.html">debug远程项目</a></li>
+<li><a href="快速调试方法--项目实施异常解决过程.html">项目实施异常解决过程</a></li>
+</ol>
+<p><a href="git.html">git</a></p>
+
+<p><a href="redis.html">redis</a></p>
+
+<ol>
+<li><a href="redis--redis的安装与主从复制.html">redis的安装与主从复制</a></li>
+<li><a href="redis--Redis集群搭建与简单使用.html">Redis集群搭建与简单使用</a></li>
+<li><a href="redis--redis操作.html">redis操作</a></li>
+</ol>
+<p><a href="AOP--Filter使用，过滤器和拦截器的区别.html">AOP--Filter使用，过滤器和拦截器的区别</a></p>
+
+<p><a href="VM分析.html">VM分析</a></p>
+
+<ol>
+<li><a href="VM分析--死锁分析.html">死锁分析</a></li>
+<li><a href="VM分析--jstack排查定位线程.html">jstack排查定位线程</a></li>
+<li><a href="VM分析--jmap,jhat,jstat,hprof使用和分析.html">jmap,jhat,jstat,hprof使用和分析</a></li>
+</ol>
+<p><a href="JMS_-_MQ.html">JMS - MQ</a></p>
+
+<ol>
+<li><a href="JMS_-_MQ--消息队列基本知识.html">消息队列基本知识</a></li>
+<li><a href="JMS_-_MQ--kafak安装与使用.html">kafak安装与使用</a></li>
+<li><a href="JMS_-_MQ--kafka集群模式.html">kafka集群模式</a></li>
+<li><a href="JMS_-_MQ--kafka-webull.html">kafka-webull</a></li>
+<li><a href="JMS_-_MQ--activeMq-JMS基本概念.html">activeMq-JMS基本概念</a></li>
+<li><a href="JMS_-_MQ--activeMq-MessageListenerContainer.html">activeMq-MessageListenerContainer</a></li>
+<li><a href="JMS_-_MQ--activeMq-三种消息监听器.html">activeMq-三种消息监听器</a></li>
+<li><a href="JMS_-_MQ--AMQ可靠消息传送.html">AMQ可靠消息传送</a></li>
+<li><a href="JMS_-_MQ--activeMq在项目中基本使用.html">activeMq在项目中基本使用</a></li>
+</ol>
+<p><a href="高并发.html">高并发</a></p>
+
+<p><a href="mysql数据库设计开发最佳实践.html">mysql数据库设计开发最佳实践</a></p>
+
+<ol>
+<li><a href="mysql数据库设计开发最佳实践--存储过程.html">存储过程</a></li>
+<li><a href="mysql数据库设计开发最佳实践--mysql知识总结.html">mysql知识总结</a></li>
+</ol></div>
+<div class="page"><h1><b><u>18-03-22 app.xml各节点解析</u></b></h1>启动项目，加载spring.xml时，会注册下面的一群解析器对xml进行解析成对应的bean：<br /><br /><div class="codebox"><div class="codebox"><span style="color:#7f0044;font-weight:400">public</span>&nbsp;<span style="color:#7f0044;font-weight:400">class</span>&nbsp;ContextNamespaceHandler&nbsp;<span style="color:#7f0044;font-weight:400">extends</span>&nbsp;NamespaceHandlerSupport&nbsp;{<br />	<span style="color:#7f0044;font-weight:400">public</span>&nbsp;<span style="color:#7f0044;font-weight:400">void</span>&nbsp;init()&nbsp;{<br />		registerBeanDefinitionParser(<span style="color:#3ad900;font-weight:400">"property-placeholder"</span>,&nbsp;<span style="color:#ff9d00;font-weight:700">new</span>&nbsp;PropertyPlaceholderBeanDefinitionParser());<br />		registerBeanDefinitionParser(<span style="color:#3ad900;font-weight:400">"property-override"</span>,&nbsp;<span style="color:#ff9d00;font-weight:700">new</span>&nbsp;PropertyOverrideBeanDefinitionParser());<br />		registerBeanDefinitionParser(<span style="color:#3ad900;font-weight:400">"annotation-config"</span>,&nbsp;<span style="color:#ff9d00;font-weight:700">new</span>&nbsp;AnnotationConfigBeanDefinitionParser());<br />		registerBeanDefinitionParser(<span style="color:#3ad900;font-weight:400">"component-scan"</span>,&nbsp;<span style="color:#ff9d00;font-weight:700">new</span>&nbsp;ComponentScanBeanDefinitionParser());<br />		registerBeanDefinitionParser(<span style="color:#3ad900;font-weight:400">"load-time-weaver"</span>,&nbsp;<span style="color:#ff9d00;font-weight:700">new</span>&nbsp;LoadTimeWeaverBeanDefinitionParser());<br />		registerBeanDefinitionParser(<span style="color:#3ad900;font-weight:400">"spring-configured"</span>,&nbsp;<span style="color:#ff9d00;font-weight:700">new</span>&nbsp;SpringConfiguredBeanDefinitionParser());<br />		registerBeanDefinitionParser(<span style="color:#3ad900;font-weight:400">"mbean-export"</span>,&nbsp;<span style="color:#ff9d00;font-weight:700">new</span>&nbsp;MBeanExportBeanDefinitionParser());<br />		registerBeanDefinitionParser(<span style="color:#3ad900;font-weight:400">"mbean-server"</span>,&nbsp;<span style="color:#ff9d00;font-weight:700">new</span>&nbsp;MBeanServerBeanDefinitionParser());<br />	}<br /><br />}</div></div><br /><span style="color:#f30404;">接口 BeanDefinitionParser</span><span style="color:#4f4f4f;">，</span>文档描述说，它是一个用来<span style="color:#f30404;">处理自定义</span>，<span style="color:#f30404;">顶级（&lt;beans/&gt;的直接儿子标签）标签</span>的接口抽象。可以实现它来将自定义的标签转化为 BeanDefinition类。<br /><a href="https://blog.csdn.net/j080624/article/details/56277315">https://blog.csdn.net/j080624/article/details/56277315</a><br /><br /><br />1. context:property-placeholder<br />• 为什么要用它？<br />☐ 有些参数在某些阶段中是常量，如db连接池配置<br />☐ 这些参数在不同阶段之间又往往需要改变，如test 与 生产环境需要方便切换<br />• PropertyPlaceholderConfigurer为其解析器类<br /><a href="https://www.cnblogs.com/leftthen/p/5615066.html">https://www.cnblogs.com/leftthen/p/5615066.html</a><br /><br />BeanFactory bf = new XmlBeanFactory(new ClassPathResource("xml/placeholder.xml")); <span style="color:#f30404;">无法解析处理</span><br /><div class="codebox"><div class="codebox"><span style="color:#7f0044;font-weight:400">public</span>&nbsp;XmlBeanFactory(Resource&nbsp;resource,&nbsp;BeanFactory&nbsp;parentBeanFactory)&nbsp;<span style="color:#7f0044;font-weight:400">throws</span>&nbsp;BeansException&nbsp;{<br />		<span style="color:#ff9d00;font-weight:700">super</span>(parentBeanFactory);<br />		<span style="color:#ff9d00;font-weight:700">this</span>.reader.loadBeanDefinitions(resource);<br />	}</div></div><br /><br />ApplicationContext ac = new ClassPathXmlApplicationContext("xml/placeholder.xml"); <span style="color:#f30404;">可以解析处理</span><br /><div class="codebox"><div class="codebox"><span style="color:#7f0044;font-weight:400">public</span>&nbsp;ClassPathXmlApplicationContext(String[]&nbsp;configLocations,&nbsp;<span style="color:#7f0044;font-weight:400">boolean</span>&nbsp;refresh,&nbsp;ApplicationContext&nbsp;parent)<br />			<span style="color:#7f0044;font-weight:400">throws</span>&nbsp;BeansException&nbsp;{<br /><br />		<span style="color:#ff9d00;font-weight:700">super</span>(parent);<br />		setConfigLocations(configLocations);<br />		<span style="color:#ff9d00;font-weight:700">if</span>&nbsp;(refresh)&nbsp;{<br />			refresh();<br />		}<br />	}</div></div><br /><br />• 实现原理<br />PropertyPlaceholderConfigurer<span style="color:#f30404;">实现了BeanFactoryPostProcessor这个接口</span>，该接口功能是允许修改上下文中bean的定义，以及相关bean属性值。并且这个过程是在Bean实例化之前完成的。其实Spring完成占位符替换，最重要的是利用了实现了这个接口的类。在实例化之前，将占位符进行了替换。<br /><br />• 扩展（例如实现密码的加密，解密）<br />• 使用@Value获取注意：不能声明为static, 所属类必须受Spring管理；<a href="https://blog.csdn.net/zzmlake/article/details/54946346">https://blog.csdn.net/zzmlake/article/details/54946346</a><br /><br />2. import 标签<br />• 多个 Spring 配置文件通过 import 方式整合的话：<br />☐ 配置文件会先合并，后解析，也就是说，无论是命名空间还是配置的内容，都会合并处理。<br />☐ 因为多个 Spring 配置文件最终会合并到一起（形成一个 ApplicationContext），因此这些配置中的 bean 都是可以互相引用的。<br />• &lt;import&gt;标签中使用${}占位符获得配置文件的属性值 <a href="https://blog.csdn.net/qq_34120041/article/details/53671427">https://blog.csdn.net/qq_34120041/article/details/53671427</a><br /><br />• 重名bean咋搞？<a href="https://blog.csdn.net/mozhenghua/article/details/5680444">https://blog.csdn.net/mozhenghua/article/details/5680444</a><br />☐ Spring log: <span style="color:#ff0000;text-decoration:underline;">Overriding bean definition for bean 'xxxx': replacing [Generic bean: class</span>...<br />结论：spring在处理有重名的bean的定义的时候原来是使用的覆盖（override）的方式<br />☐ 解决方法<br />DefaultListableBeanFactory<span style="color:#4f4f4f;"> </span>的代码分析： spring ioc容器在加载bean的过程中会去判断beanName 是否有重复，如果发现重复的话再根据allowBeanDefinitionOverriding 这个成员变量，<span style="color:#f30404;">如果是false的话则抛出BeanDefinitionStoreException 这个异常</span>，如果为true的话就会覆盖这个bean的定义（默认为true）<br /><br />所以，重写beanFactory 的listener<br /><div class="codebox"><div class="codebox">ApplicationContext&nbsp;ac&nbsp;=&nbsp;<span style="color:#ff9d00;font-weight:700">new</span>&nbsp;ClassPathXmlApplicationContext(<span style="color:#3ad900;font-weight:400">"xml/placeholder.xml"</span>){<br />	@Override<br />	<span style="color:#7f0044;font-weight:400">protected</span>&nbsp;DefaultListableBeanFactory&nbsp;createBeanFactory()&nbsp;{<br />		<span style="color:#7f0044;font-weight:400">final</span>&nbsp;DefaultListableBeanFactory&nbsp;result&nbsp;=&nbsp;<span style="color:#ff9d00;font-weight:700">super</span>.createBeanFactory();<br />		result.setAllowBeanDefinitionOverriding(<span style="color:#ff0044;font-weight:400">false</span>);<br />		<span style="color:#ff9d00;font-weight:700">return</span>&nbsp;result;<br />	}<br />	<span style="color:#0088ff;font-weight:400">//&nbsp;不允同名bean,&nbsp;上面或下面的方式都可以控制</span><br />	@Override<br />	<span style="color:#7f0044;font-weight:400">protected</span>&nbsp;<span style="color:#7f0044;font-weight:400">void</span>&nbsp;customizeBeanFactory(DefaultListableBeanFactory&nbsp;beanFactory)&nbsp;{<br />		beanFactory.setAllowBeanDefinitionOverriding(<span style="color:#ff0044;font-weight:400">false</span>);<br />		<span style="color:#ff9d00;font-weight:700">super</span>.customizeBeanFactory(beanFactory);<br />	}<br />};</div></div><br /><br />3. task:executor &amp; task:scheduler &amp; task:annotation-driven标签<br />以下是java.util中的线程池相关类<br /><img src="images\47-1.png" alt="images\47-1.png" /><br /><br />• task:executor <br />☐ Specifies the <span style="color:#f30404;">java.util.</span><span style="color:#f30404;background-color:#f9f720;">Executor</span> instance to use when invoking asynchronous methods. If not provided, an instance of <span style="color:#f30404;">org.springframework.core.task.</span><span style="color:#f30404;background-color:#f9f720;">SimpleAsyncTaskExecutor</span> will be used by default.<br />☐ 介绍<a href="http://www.cnblogs.com/duanxz/p/4877065.html">http://www.cnblogs.com/duanxz/p/4877065.html</a><br />Spring的TaskExecutor接口等同于java.util.concurrent.Executor接口。实际上，它存在主要原因是为了在使用线程池的时候，将对Java 5的依赖抽象掉。它的其中一个默认实现是<span style="color:#f30404;">SimpleAsyncTaskExecutor类</span>，这个实现不重用任何线程，或者说它每次调用都启动一个新线程。但是，它还是支持对并发总数设限，当超过线程并发总数限制时，阻塞新的调用，直到有位置被释放。<br /><br />所以<br />&lt;task:executor id="executor" pool-size="${task.executor:100}" /&gt;<br />等价于<br />&lt;bean id="<span style="color:#f30404;">simpleAsyncTaskExecutor</span>"	class="org.springframework.core.task.<span style="color:#f30404;">SimpleAsyncTaskExecutor</span>"&gt;<br /><br /><br />• task:scheduler 和 task:executor雷同<br />☐ Specifies org.springframework.scheduling.<span style="color:#f30404;background-color:#f9f720;">TaskScheduler</span> or java.util.<span style="color:#f30404;background-color:#f9f720;">ScheduledExecutorService</span> instance to use when invoking scheduled methods<br />☐ 示例分析<br /><div class="codebox"><div class="codebox">&lt;<span style="color:#ff9d00;font-weight:700">task</span>:scheduler&nbsp;id=<span style="color:#3ad900;font-weight:400">"taskScheduler"</span>&nbsp;pool-size=<span style="color:#3ad900;font-weight:400">"10"</span>&nbsp;/&gt;<br /><br />&lt;<span style="color:#ff9d00;font-weight:700">task</span>:scheduled-tasks&nbsp;scheduler=<span style="color:#3ad900;font-weight:400">"taskScheduler"</span>&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;1s执行一次，但是我业务需要10s<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:#ff9d00;font-weight:700">task</span>:scheduled&nbsp;ref=<span style="color:#3ad900;font-weight:400">"app"</span>&nbsp;method=<span style="color:#3ad900;font-weight:400">"execute1"</span>&nbsp;cron=<span style="color:#3ad900;font-weight:400">"*/1&nbsp;*&nbsp;*&nbsp;*&nbsp;*&nbsp;?"</span>/&gt;<br />	5s&nbsp;执行一次&nbsp;但是我业务极快<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span style="color:#ff9d00;font-weight:700">task</span>:scheduled&nbsp;ref=<span style="color:#3ad900;font-weight:400">"app"</span>&nbsp;method=<span style="color:#3ad900;font-weight:400">"execute2"</span>&nbsp;cron=<span style="color:#3ad900;font-weight:400">"*/5&nbsp;*&nbsp;*&nbsp;*&nbsp;*&nbsp;?"</span>/&gt;<br />&lt;/<span style="color:#ff9d00;font-weight:700">task</span>:scheduled-tasks&gt;</div></div><br />pool-size=1的情况(default)<br /><div class="codebox"><div class="codebox">Task:&nbsp;1,&nbsp;Current&nbsp;time:&nbsp;2018-03-23T14:45:11.052<br />Task:&nbsp;2,&nbsp;Current&nbsp;time:&nbsp;2018-03-23T14:45:11.052<br />Task:&nbsp;1,&nbsp;Current&nbsp;time:&nbsp;2018-03-23T14:45:22.002<br />Task:&nbsp;2,&nbsp;Current&nbsp;time:&nbsp;2018-03-23T14:45:22.003<br /><br />task2&nbsp;受task1的影响，需要等待task1执行完</div></div><br /><br />pool-size=10的情况<br /><div class="codebox"><div class="codebox">Task:&nbsp;2,&nbsp;Current&nbsp;time:&nbsp;2018-03-23T14:48:45.062<br />Task:&nbsp;2,&nbsp;Current&nbsp;time:&nbsp;2018-03-23T14:48:50.001<br />Task:&nbsp;1,&nbsp;Current&nbsp;time:&nbsp;2018-03-23T14:48:54.003<br />Task:&nbsp;2,&nbsp;Current&nbsp;time:&nbsp;2018-03-23T14:48:55.001<br />Task:&nbsp;2,&nbsp;Current&nbsp;time:&nbsp;2018-03-23T14:49:00.002<br /><br />task2&nbsp;不受task1的影响</div></div><br /><br />• task:annotation-driven 通过注解就可以使用异步和定时器<br />☐ Enables the detection of <span style="color:#f30404;background-color:#f9f720;">@Async and @Scheduled</span> annotations on any Spring-managed object.<br />☐ 使用方法 &lt;task:annotation-driven <span style="color:#f30404;">executor</span>="executor" <span style="color:#f30404;">scheduler</span>="scheduler" /&gt;<br />☐ 示例<br />executor使用的是simpleAsyncTaskExecutor，池大小为2-4<br /><div class="codebox"><div class="codebox">@Scheduled(cron&nbsp;=&nbsp;<span style="color:#3ad900;font-weight:400">"*/5&nbsp;*&nbsp;*&nbsp;*&nbsp;*&nbsp;?"</span>)<br /><span style="color:#7f0044;font-weight:400">public</span>&nbsp;<span style="color:#7f0044;font-weight:400">void</span>&nbsp;testScheduled()&nbsp;<span style="color:#7f0044;font-weight:400">throws</span>&nbsp;Exception&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(<span style="color:#3ad900;font-weight:400">"Test&nbsp;is&nbsp;testScheduled&nbsp;working......"</span>);<br />}<br /><br />@Async<br /><span style="color:#7f0044;font-weight:400">public</span>&nbsp;<span style="color:#7f0044;font-weight:400">void</span>&nbsp;testAsync()&nbsp;<span style="color:#7f0044;font-weight:400">throws</span>&nbsp;Exception&nbsp;{<br />	Thread.sleep(<span style="color:#ff0044;font-weight:400">5000</span>);<br />	System.out.println(Thread.currentThread().getName()&nbsp;+&nbsp;<span style="color:#3ad900;font-weight:400">"&nbsp;is&nbsp;testAsync&nbsp;working......"</span>);<br />}<br /><br />一次提交执行20次&nbsp;testAsync()<br /><br />运行结果：<br />Test&nbsp;is&nbsp;testScheduled&nbsp;working......<br />simpleAsyncTaskExecutor-<span style="color:#ff0044;font-weight:400">1</span>&nbsp;is&nbsp;testAsync&nbsp;working......<br />simpleAsyncTaskExecutor-<span style="color:#ff0044;font-weight:400">2</span>&nbsp;is&nbsp;testAsync&nbsp;working......<br />Test&nbsp;is&nbsp;testScheduled&nbsp;working......<br />simpleAsyncTaskExecutor-<span style="color:#ff0044;font-weight:400">1</span>&nbsp;is&nbsp;testAsync&nbsp;working......<br />simpleAsyncTaskExecutor-<span style="color:#ff0044;font-weight:400">2</span>&nbsp;is&nbsp;testAsync&nbsp;working......</div></div><br /><br />4. context:annotation-config &amp;  context:component-scan 标签 <a href="http://www.cnblogs.com/lcngu/p/5080702.html">http://www.cnblogs.com/lcngu/p/5080702.html</a><br />☐ 概念<br />• annotation-config : Activates various annotations to be detected in bean classes: Spring's <span style="color:#f30404;">@Required and @Autowired</span>, as well as JSR 250's @PostConstruct, @PreDestroy and @Resource (if available) and so on.<br />•  component-scan : Scans the classpath for annotated components that will be auto-registered as Spring beans. By default, the Spring-provided <span style="color:#ff0000;">@Component, @Repository, @Service, @Controller, @RestController, @ControllerAdvice, and @Configuration</span> stereotypes will be detected.<br />☐ 原理<br />• annotation-config : <span style="color:#f30404;">隐式的向Spring容器注册AutowiredAnnotationBeanPostProcessor (</span>@Autowired注解)<span style="color:#f30404;">,  CommonAnnotationBeanPostProcessor (</span>@Resource、@ PostConstruct、@ PreDestroy等注解<span style="color:#f30404;">),  PersistenceAnnotationBeanPostProcessor (</span>@PersistenceContext注解)<span style="color:#f30404;">,  RequiredAnnotationBeanPostProcessor </span>(@Required注解), 使系统能够识别相应的注解<br />• component-scan : <span style="color:#333333;">启用了对类包进行扫描以实施注释驱动 Bean 定义的功能，同时还启用了注释驱动自动注入的功能</span>(<span style="color:#f30404;">白话：一方面不需要你手动xml配置bean了，另一方面又有了annotation-config的功能</span>, 用&lt;context:annotation-config/&gt;，我们还需要配置Xml注册Bean，而使用&lt;context:component-scan /&gt;的话，注册的步骤都免了)<br /><br />5. bean 标签<br />☐ id &amp; name 属性的介绍与区别 <a href="https://blog.csdn.net/qq_22063697/article/details/51912386">https://blog.csdn.net/qq_22063697/article/details/51912386</a><br /><br /><br /></div></div>
+</body></html>

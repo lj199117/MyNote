@@ -1,0 +1,91 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>jstack排查定位线程</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+<body><div class="main"><div class="tree">
+<p><strong>Index</strong></p>
+<p><a href="webull工作.html">webull工作</a></p>
+
+<p><a href="Maven.html">Maven</a></p>
+
+<ol>
+<li><a href="Maven--distributionManagement.html">distributionManagement</a></li>
+</ol>
+<p><a href="架构相关.html">架构相关</a></p>
+
+<ol>
+<li><a href="架构相关--关于dubbo.html">关于dubbo</a></li>
+<li><a href="架构相关--POM结构图.html">POM结构图</a></li>
+<li><a href="架构相关--dbuuo基础架构.html">dbuuo基础架构</a></li>
+</ol>
+<p><a href="zk的配置与部署.html">zk的配置与部署</a></p>
+
+<p><a href="linux.html">linux</a></p>
+
+<ol>
+<li><a href="linux--linux的Java环境配置.html">linux的Java环境配置</a></li>
+<li><a href="linux--服务器远程拷贝.html">服务器远程拷贝</a></li>
+<li><a href="linux--linux_系统相关常用.html">linux 系统相关常用</a></li>
+</ol>
+<p><a href="月总结.html">月总结</a></p>
+
+<ol>
+<li><a href="月总结--18-02(md5_mysql相关).html">18-02(md5 mysql相关)</a></li>
+<li><a href="月总结--18-03-07(一个项目是如何run的).html">18-03-07(一个项目是如何run的)</a></li>
+<li><a href="月总结--18-03-08(自我评价).html">18-03-08(自我评价)</a></li>
+<li><a href="月总结--18-03-09(maven).html">18-03-09(maven)</a></li>
+<li><a href="月总结--18-03-20_xml.html">18-03-20 xml</a></li>
+<li><a href="月总结--18-03-22_app.xml各节点解析.html">18-03-22 app.xml各节点解析</a></li>
+<li><a href="月总结--18-04-01_Spring_父子容器.html">18-04-01 Spring 父子容器</a></li>
+</ol>
+<p><a href="快速调试方法.html">快速调试方法</a></p>
+
+<ol>
+<li><a href="快速调试方法--log.html">log</a></li>
+<li><a href="快速调试方法--debug远程项目.html">debug远程项目</a></li>
+<li><a href="快速调试方法--项目实施异常解决过程.html">项目实施异常解决过程</a></li>
+</ol>
+<p><a href="git.html">git</a></p>
+
+<p><a href="redis.html">redis</a></p>
+
+<ol>
+<li><a href="redis--redis的安装与主从复制.html">redis的安装与主从复制</a></li>
+<li><a href="redis--Redis集群搭建与简单使用.html">Redis集群搭建与简单使用</a></li>
+<li><a href="redis--redis操作.html">redis操作</a></li>
+</ol>
+<p><a href="AOP--Filter使用，过滤器和拦截器的区别.html">AOP--Filter使用，过滤器和拦截器的区别</a></p>
+
+<p><a href="VM分析.html">VM分析</a></p>
+
+<ol>
+<li><a href="VM分析--死锁分析.html">死锁分析</a></li>
+<li><a href="VM分析--jstack排查定位线程.html">jstack排查定位线程</a></li>
+<li><a href="VM分析--jmap,jhat,jstat,hprof使用和分析.html">jmap,jhat,jstat,hprof使用和分析</a></li>
+</ol>
+<p><a href="JMS_-_MQ.html">JMS - MQ</a></p>
+
+<ol>
+<li><a href="JMS_-_MQ--消息队列基本知识.html">消息队列基本知识</a></li>
+<li><a href="JMS_-_MQ--kafak安装与使用.html">kafak安装与使用</a></li>
+<li><a href="JMS_-_MQ--kafka集群模式.html">kafka集群模式</a></li>
+<li><a href="JMS_-_MQ--kafka-webull.html">kafka-webull</a></li>
+<li><a href="JMS_-_MQ--activeMq-JMS基本概念.html">activeMq-JMS基本概念</a></li>
+<li><a href="JMS_-_MQ--activeMq-MessageListenerContainer.html">activeMq-MessageListenerContainer</a></li>
+<li><a href="JMS_-_MQ--activeMq-三种消息监听器.html">activeMq-三种消息监听器</a></li>
+<li><a href="JMS_-_MQ--AMQ可靠消息传送.html">AMQ可靠消息传送</a></li>
+<li><a href="JMS_-_MQ--activeMq在项目中基本使用.html">activeMq在项目中基本使用</a></li>
+</ol>
+<p><a href="高并发.html">高并发</a></p>
+
+<p><a href="mysql数据库设计开发最佳实践.html">mysql数据库设计开发最佳实践</a></p>
+
+<ol>
+<li><a href="mysql数据库设计开发最佳实践--存储过程.html">存储过程</a></li>
+<li><a href="mysql数据库设计开发最佳实践--mysql知识总结.html">mysql知识总结</a></li>
+</ol></div>
+<div class="page"><h1><b><u>jstack排查定位线程</u></b></h1>参考：<a href="http://blog.csdn.net/zhao9tian/article/details/46289115">http://blog.csdn.net/zhao9tian/article/details/46289115</a><br /><br /><span style="color:#333333;">A、 jps(Java Virtual Machine Process Status Tool) </span> <span style="color:#333333;"> jps主要用来输出JVM中运行的进程状态信息</span><br />语法：<span style="color:#c7254e;">jps [options] [hostid]</span> <span style="color:#333333;">如果不指定hostid就默认为当前主机或服务器。</span><br />参数：<br /><div class="codebox"><div class="codebox">-q&nbsp;不输出类名、Jar名和传入main方法的参数<br />-m&nbsp;输出传入main方法的参数<br />-l&nbsp;输出main类或Jar的全限名<br />-v&nbsp;输出传入JVM的参数</div></div><br />例如：<br /><img src="images\22-1.png" alt="images\22-1.png" /><br /><br /><span style="color:#333333;">B、 jstack</span> <span style="color:#333333;"> jstack主要用来查看某个Java进程内的</span><span style="color:#f30404;">线程堆栈信息</span><br /><span style="color:#333333;">语法</span>：<br /><div class="codebox"><div class="codebox">jstack&nbsp;[option]&nbsp;pid<br />jstack&nbsp;[option]&nbsp;executable&nbsp;core<br />jstack&nbsp;[option]&nbsp;[server-id@]remote-hostname-or-ip</div></div><br /><br />参数：<br /><div class="codebox"><div class="codebox">-l&nbsp;long&nbsp;listings，会打印出额外的锁信息，在发生死锁时可以用jstack&nbsp;-l&nbsp;pid来观察锁持有情况<br />-m&nbsp;mixed&nbsp;mode，不仅会输出Java堆栈信息，还会输出C/C++堆栈信息（比如Native方法）<br /></div></div><br /><span style="color:#333333;"> jstack可以</span><span style="color:#f30404;">定位到线程堆栈</span><span style="color:#333333;">，根据堆栈信息我们可以定位到具体代码，所以它在JVM性能调优中使用得非常多</span><br /><br />例如：<br /><span style="color:#333333;">下面我们来</span><span style="color:#f30404;">一个实例找出某个Java进程中最耗费CPU的Java线程</span><span style="color:#333333;">并定位堆栈信息，用到的命令有</span><span style="color:#f30404;background-color:#f9f720;">ps、top、printf、jstack、grep</span><span style="color:#333333;">。</span><br />1.<span style="color:#333333;">先</span><span style="color:#f30404;">找出Java进程ID</span><span style="color:#333333;">，我部署在服务器上的Java应用名称为</span>webll-crm-center<br /><img src="images\22-2.png" alt="images\22-2.png" /><br /><br />2.<span style="color:#f30404;">找出该进程内最耗费CPU的线程</span><span style="color:#333333;">，可以使用ps -Lfp pid或者ps -mp pid -o THREAD, tid, time或者</span><span style="color:#f30404;">top -Hp pid</span><span style="color:#333333;">，我这里用第三个</span><br />(这里重启了系统，PID变为12673了)<br /><img src="images\22-3.png" alt="images\22-3.png" /><br /><br />可以看到CPU<span style="color:#f30404;">耗时最长的是线程ID为12686的线程 &amp; 12932线程 （最好观察一段时间）</span><br />3.用printf查看线程的16进制数<br /><div class="codebox"><div class="codebox">printf&nbsp;"%x\n"&nbsp;12932&nbsp;&nbsp;===&gt;0x3284</div></div><br /><br />4.<span style="color:#333333;">jstack上场了，它用来输出进程PID=12673的堆栈信息，然后根据线程ID的十六进制值3284 grep</span><br />(这里预演系统没有jstack，PID变为16925了,分析partner-center)<br /><img src="images\22-4.png" alt="images\22-4.png" /><br /><br /></div></div>
+</body></html>

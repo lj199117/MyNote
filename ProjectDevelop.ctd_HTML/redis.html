@@ -1,0 +1,91 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>redis</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+<body><div class="main"><div class="tree">
+<p><strong>Index</strong></p>
+<p><a href="webull工作.html">webull工作</a></p>
+
+<p><a href="Maven.html">Maven</a></p>
+
+<ol>
+<li><a href="Maven--distributionManagement.html">distributionManagement</a></li>
+</ol>
+<p><a href="架构相关.html">架构相关</a></p>
+
+<ol>
+<li><a href="架构相关--关于dubbo.html">关于dubbo</a></li>
+<li><a href="架构相关--POM结构图.html">POM结构图</a></li>
+<li><a href="架构相关--dbuuo基础架构.html">dbuuo基础架构</a></li>
+</ol>
+<p><a href="zk的配置与部署.html">zk的配置与部署</a></p>
+
+<p><a href="linux.html">linux</a></p>
+
+<ol>
+<li><a href="linux--linux的Java环境配置.html">linux的Java环境配置</a></li>
+<li><a href="linux--服务器远程拷贝.html">服务器远程拷贝</a></li>
+<li><a href="linux--linux_系统相关常用.html">linux 系统相关常用</a></li>
+</ol>
+<p><a href="月总结.html">月总结</a></p>
+
+<ol>
+<li><a href="月总结--18-02(md5_mysql相关).html">18-02(md5 mysql相关)</a></li>
+<li><a href="月总结--18-03-07(一个项目是如何run的).html">18-03-07(一个项目是如何run的)</a></li>
+<li><a href="月总结--18-03-08(自我评价).html">18-03-08(自我评价)</a></li>
+<li><a href="月总结--18-03-09(maven).html">18-03-09(maven)</a></li>
+<li><a href="月总结--18-03-20_xml.html">18-03-20 xml</a></li>
+<li><a href="月总结--18-03-22_app.xml各节点解析.html">18-03-22 app.xml各节点解析</a></li>
+<li><a href="月总结--18-04-01_Spring_父子容器.html">18-04-01 Spring 父子容器</a></li>
+</ol>
+<p><a href="快速调试方法.html">快速调试方法</a></p>
+
+<ol>
+<li><a href="快速调试方法--log.html">log</a></li>
+<li><a href="快速调试方法--debug远程项目.html">debug远程项目</a></li>
+<li><a href="快速调试方法--项目实施异常解决过程.html">项目实施异常解决过程</a></li>
+</ol>
+<p><a href="git.html">git</a></p>
+
+<p><a href="redis.html">redis</a></p>
+
+<ol>
+<li><a href="redis--redis的安装与主从复制.html">redis的安装与主从复制</a></li>
+<li><a href="redis--Redis集群搭建与简单使用.html">Redis集群搭建与简单使用</a></li>
+<li><a href="redis--redis操作.html">redis操作</a></li>
+</ol>
+<p><a href="AOP--Filter使用，过滤器和拦截器的区别.html">AOP--Filter使用，过滤器和拦截器的区别</a></p>
+
+<p><a href="VM分析.html">VM分析</a></p>
+
+<ol>
+<li><a href="VM分析--死锁分析.html">死锁分析</a></li>
+<li><a href="VM分析--jstack排查定位线程.html">jstack排查定位线程</a></li>
+<li><a href="VM分析--jmap,jhat,jstat,hprof使用和分析.html">jmap,jhat,jstat,hprof使用和分析</a></li>
+</ol>
+<p><a href="JMS_-_MQ.html">JMS - MQ</a></p>
+
+<ol>
+<li><a href="JMS_-_MQ--消息队列基本知识.html">消息队列基本知识</a></li>
+<li><a href="JMS_-_MQ--kafak安装与使用.html">kafak安装与使用</a></li>
+<li><a href="JMS_-_MQ--kafka集群模式.html">kafka集群模式</a></li>
+<li><a href="JMS_-_MQ--kafka-webull.html">kafka-webull</a></li>
+<li><a href="JMS_-_MQ--activeMq-JMS基本概念.html">activeMq-JMS基本概念</a></li>
+<li><a href="JMS_-_MQ--activeMq-MessageListenerContainer.html">activeMq-MessageListenerContainer</a></li>
+<li><a href="JMS_-_MQ--activeMq-三种消息监听器.html">activeMq-三种消息监听器</a></li>
+<li><a href="JMS_-_MQ--AMQ可靠消息传送.html">AMQ可靠消息传送</a></li>
+<li><a href="JMS_-_MQ--activeMq在项目中基本使用.html">activeMq在项目中基本使用</a></li>
+</ol>
+<p><a href="高并发.html">高并发</a></p>
+
+<p><a href="mysql数据库设计开发最佳实践.html">mysql数据库设计开发最佳实践</a></p>
+
+<ol>
+<li><a href="mysql数据库设计开发最佳实践--存储过程.html">存储过程</a></li>
+<li><a href="mysql数据库设计开发最佳实践--mysql知识总结.html">mysql知识总结</a></li>
+</ol></div>
+<div class="page"><h1><b><u>redis</u></b></h1><br />连接测试环境redis<br />./redis-cli.exe -h 192.168.40.203 -p 6379 -a pwd7862<br /><br />redis安装<br />wget <a href="http://download.redis.io/releases/redis-4.0.2.tar.gz">http://download.redis.io/releases/redis-4.0.2.tar.gz</a><br />cd redis-4.0.2/<br />make<br /><br />为了方便调用，我们自己新建一个目录来存放执行文件以及日志配置文件<br /><span style="color:#454545;">mkdir redis</span><br /><span style="color:#454545;">cd redis</span><br />pwd : /data/myuser/redis-4.0.2/redis<br />mkdir bin ; mkdir etc ; mkdir var;<br /><br />拷贝执行文件和配置文件到相应目录<br />myuser@fm3:/data/myuser/redis-4.0.2/redis$ cp /data/myuser/redis-4.0.2/src/redis-benchmark ./bin/<br />myuser@fm3:/data/myuser/redis-4.0.2/redis$ cp /data/myuser/redis-4.0.2/src/redis-benchmark ./bin/<br />myuser@fm3:/data/myuser/redis-4.0.2/redis$ cp /data/myuser/redis-4.0.2/src/redis-cli ./bin/<br />myuser@fm3:/data/myuser/redis-4.0.2/redis$ cp /data/myuser/redis-4.0.2/src/redis-server ./bin/<br />myuser@fm3:/data/myuser/redis-4.0.2/redis$ cp /data/myuser/redis-4.0.2/redis.conf ./etc/<br /><br />主备节点的配置：<br /><br />master节点：<br />port:6479<br />vi etc/redis.conf  更改端口<br />pidfile /var/run/redis_6479.pid<br />port 6479<br /><br /><br />复制一份配置出来为从机所用<br />slave节点：<br />1 port:6579  暂时配置一台<br />2 port:6679<br />3 port:6779<br /><br />pwd : /data/myuser/redis-4.0.2/redis/etc<br /><span style="color:#454545;">cp redis.conf redis_slave.conf</span><br /><br />vi redis_slave.conf <br />编辑从机文件：<br /> pidfile /var/run/redis_slave_6579.pid  <br /> port 6579 <br /> logfile /data/myuser/redis-4.0.2/redis/var/redis_slave_6579.log <br /> dbfilename dump_slave_6579.rdb <br /> slaveof 127.0.0.1 <span style="color:#f30404;">6479</span><br /><br />备注：把 daemonize no 改成 daemonize yes  可以使redis在后台运行 <br /> <br /> <span style="color:#454545;">启动主从机</span><br /> myuser@fm3:/data/myuser/redis-4.0.2/redis$ pwd<br />/data/myuser/redis-4.0.2/redis<br /><br />myuser@fm3:/data/myuser/redis-4.0.2/redis$ <span style="color:#f30404;">./bin/redis-server ./etc/redis.conf </span><br /><br />myuser@fm3:/data/myuser/redis-4.0.2/redis$ ./bin/redis-server ./etc/redis_slave.conf <br />myuser@fm3:/data/myuser/redis-4.0.2/redis$ ps -ef |grep redis<br />redis     1512     1  0 8月07 ?       01:26:43 redis-server *:6379<br />myuser    1665     1  0 03:02 ?        00:00:00 <span style="color:#f30404;">./bin/redis-server *:6479</span><br />myuser    1719     1  0 03:03 ?        00:00:00 <span style="color:#f30404;">./bin/redis-server *:6579</span><br />myuser    1724   371  0 03:03 pts/1    00:00:00 grep redis<br /><br />启动客户端<br />myuser@fm3:/data/myuser/redis-4.0.2/redis$ ./bin/redis-cli -h 127.0.0.1 -p 6479<br />127.0.0.1:6479&gt; keys *<br />(empty list or set)<br /><br />关闭服务(通过客户端关闭)<br />myuser@fm3:/data/myuser/redis-4.0.2/redis$ <span style="color:#f30404;">./bin/redis-cli -h 127.0.0.1 -p 6579 shutdown</span><br />myuser@fm3:/data/myuser/redis-4.0.2/redis$ ps -ef | grep redis<br />redis     1512     1  0 8月07 ?       01:26:44 redis-server *:6379<br />myuser    1665     1  0 03:02 ?        00:00:00 ./bin/redis-server *:6479<br />myuser    2159   371  0 03:07 pts/1    00:00:00 ./bin/redis-cli -h 127.0.0.1 -p 6479<br />myuser    3128  2290  0 03:16 pts/2    00:00:00 grep redis<br /><br />master机器情况：<br />127.0.0.1:<span style="color:#f30404;">6479</span>&gt; keys *<br />1) "hah"<br />2) "lj"<br />3) "lijin"<br />127.0.0.1:6479&gt; <br /><br />slave机器情况：<br />127.0.0.1:<span style="color:#f30404;">6579</span>&gt; keys *<br />1) "hah"<br />2) "lj"<br />3) "lijin"<br />127.0.0.1:6579&gt; <br /><br /></div></div>
+</body></html>

@@ -1,0 +1,91 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>activeMq-MessageListenerContainer</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+<body><div class="main"><div class="tree">
+<p><strong>Index</strong></p>
+<p><a href="webull工作.html">webull工作</a></p>
+
+<p><a href="Maven.html">Maven</a></p>
+
+<ol>
+<li><a href="Maven--distributionManagement.html">distributionManagement</a></li>
+</ol>
+<p><a href="架构相关.html">架构相关</a></p>
+
+<ol>
+<li><a href="架构相关--关于dubbo.html">关于dubbo</a></li>
+<li><a href="架构相关--POM结构图.html">POM结构图</a></li>
+<li><a href="架构相关--dbuuo基础架构.html">dbuuo基础架构</a></li>
+</ol>
+<p><a href="zk的配置与部署.html">zk的配置与部署</a></p>
+
+<p><a href="linux.html">linux</a></p>
+
+<ol>
+<li><a href="linux--linux的Java环境配置.html">linux的Java环境配置</a></li>
+<li><a href="linux--服务器远程拷贝.html">服务器远程拷贝</a></li>
+<li><a href="linux--linux_系统相关常用.html">linux 系统相关常用</a></li>
+</ol>
+<p><a href="月总结.html">月总结</a></p>
+
+<ol>
+<li><a href="月总结--18-02(md5_mysql相关).html">18-02(md5 mysql相关)</a></li>
+<li><a href="月总结--18-03-07(一个项目是如何run的).html">18-03-07(一个项目是如何run的)</a></li>
+<li><a href="月总结--18-03-08(自我评价).html">18-03-08(自我评价)</a></li>
+<li><a href="月总结--18-03-09(maven).html">18-03-09(maven)</a></li>
+<li><a href="月总结--18-03-20_xml.html">18-03-20 xml</a></li>
+<li><a href="月总结--18-03-22_app.xml各节点解析.html">18-03-22 app.xml各节点解析</a></li>
+<li><a href="月总结--18-04-01_Spring_父子容器.html">18-04-01 Spring 父子容器</a></li>
+</ol>
+<p><a href="快速调试方法.html">快速调试方法</a></p>
+
+<ol>
+<li><a href="快速调试方法--log.html">log</a></li>
+<li><a href="快速调试方法--debug远程项目.html">debug远程项目</a></li>
+<li><a href="快速调试方法--项目实施异常解决过程.html">项目实施异常解决过程</a></li>
+</ol>
+<p><a href="git.html">git</a></p>
+
+<p><a href="redis.html">redis</a></p>
+
+<ol>
+<li><a href="redis--redis的安装与主从复制.html">redis的安装与主从复制</a></li>
+<li><a href="redis--Redis集群搭建与简单使用.html">Redis集群搭建与简单使用</a></li>
+<li><a href="redis--redis操作.html">redis操作</a></li>
+</ol>
+<p><a href="AOP--Filter使用，过滤器和拦截器的区别.html">AOP--Filter使用，过滤器和拦截器的区别</a></p>
+
+<p><a href="VM分析.html">VM分析</a></p>
+
+<ol>
+<li><a href="VM分析--死锁分析.html">死锁分析</a></li>
+<li><a href="VM分析--jstack排查定位线程.html">jstack排查定位线程</a></li>
+<li><a href="VM分析--jmap,jhat,jstat,hprof使用和分析.html">jmap,jhat,jstat,hprof使用和分析</a></li>
+</ol>
+<p><a href="JMS_-_MQ.html">JMS - MQ</a></p>
+
+<ol>
+<li><a href="JMS_-_MQ--消息队列基本知识.html">消息队列基本知识</a></li>
+<li><a href="JMS_-_MQ--kafak安装与使用.html">kafak安装与使用</a></li>
+<li><a href="JMS_-_MQ--kafka集群模式.html">kafka集群模式</a></li>
+<li><a href="JMS_-_MQ--kafka-webull.html">kafka-webull</a></li>
+<li><a href="JMS_-_MQ--activeMq-JMS基本概念.html">activeMq-JMS基本概念</a></li>
+<li><a href="JMS_-_MQ--activeMq-MessageListenerContainer.html">activeMq-MessageListenerContainer</a></li>
+<li><a href="JMS_-_MQ--activeMq-三种消息监听器.html">activeMq-三种消息监听器</a></li>
+<li><a href="JMS_-_MQ--AMQ可靠消息传送.html">AMQ可靠消息传送</a></li>
+<li><a href="JMS_-_MQ--activeMq在项目中基本使用.html">activeMq在项目中基本使用</a></li>
+</ol>
+<p><a href="高并发.html">高并发</a></p>
+
+<p><a href="mysql数据库设计开发最佳实践.html">mysql数据库设计开发最佳实践</a></p>
+
+<ol>
+<li><a href="mysql数据库设计开发最佳实践--存储过程.html">存储过程</a></li>
+<li><a href="mysql数据库设计开发最佳实践--mysql知识总结.html">mysql知识总结</a></li>
+</ol></div>
+<div class="page"><h1><b><u>activeMq-MessageListenerContainer</u></b></h1>&lt;!-- 定义Queue监听器 --&gt;<br />&lt;<span style="color:#f30404;">jms:listener-container </span>destination-type="queue" task-executor="executor"<br />	container-type="default" connection-factory="connectionFactory"<br />	acknowledge="auto"&gt;<br />	&lt;<span style="color:#f30404;">jms:listener</span> destination="test.queue" ref="queueReceiver1" /&gt;<br />	&lt;jms:listener destination="test.queue" ref="queueReceiver2" /&gt;<br />	&lt;jms:listener destination="test.queue.log" ref="queueLogReceiver" /&gt;<br />&lt;/jms:listener-container&gt;<br /><br />主要参考：<a href="http://bijian1013.iteye.com/blog/2309671">http://bijian1013.iteye.com/blog/2309671</a><br /><br />1.<span style="color:#f30404;">jms:listener-container </span>的实现其中一个实现DefaultMessageListenerContainer<br /><br />• DefaultMessageListenerContainer实现的主要原理是，通过内部初始化建立的一个taskExecutor（默认是SimpleAsyncTaskExecutor）用于执行消息监听的任务（AsyncMessageListenerInvoker）。这里<span style="color:#f30404;">默认的任务执行器是SimpleAsyncTaskExecutor，这个执行器的缺点是不会重用连接，也就是对于每个任务都需要新开启一个线程</span>，执行完任务后会关闭它。如果要优化的话<span style="color:#f30404;">可以考虑线程池</span>。 消息监听的<span style="color:#f30404;">任务被抽象成AsyncMessageListenerInvoker类</span>，这个类实现了Runnable接口，内部run方法其实是通过不断循环consumer.recieve()方法来实现监听。<br />•  我们还有一个比较关心的地方是这个DefaultMessageListenerContainer<span style="color:#f30404;">缓不缓存connection、session、consumer</span>，DefaultMessageListenerContainer会根据catchLevel来缓存共享connection、session及consumer，值为3的话就会缓存connection、session及consumer<br /><br />2.DefaultMessageListenerContainer类的主要属性<br /><img src="images\31-1.png" alt="images\31-1.png" /><br /><br /><span style="color:#f30404;">task-executor="executor" concurrency="5"</span>两个属性最好同时配置,注入了多线程taskExecutor 却始终不会以多线程处理(原因是默认的并发数即concurrentConsumers为1,所以不会有多并发的效果)；<br /><br />DefaultMessageListenerContainer也支持创建多个Session和MessageConsumer来接收消息。跟SimpleMessageListenerContainer不同的是，DefaultMessageListenerContainer创建了concurrentConsumers（默认为1）所指定个数的AsyncMessageListenerInvoker（实现了SchedulingAwareRunnable接口），并交给taskExecutor运行。<br /><br /><br /><br /></div></div>
+</body></html>
